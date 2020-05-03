@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>GoRooms</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-grid-validation-modal-tabs-print.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="header-top">
+        <div class="container header-top-container">
+            <a href="index.html" class="header-logo">
+                <img src="img/logo.png" alt="" class="header-logo-img">
+            </a>
+            <div class="header-top-btns">
+                <a href="" class="header-top-btn header-top-btn-object btn btn-light-border" data-href="#obj-popup" data-toggle="modal"
+                   data-target="#obj-popup">Зарегистрировать свой объект</a>
+                <a href="" class="header-top-btn header-top-btn-signin btn btn-light" data-href="#signin-popup" data-toggle="modal"
+                   data-target="#signin-popup">Войти</a>
+                <a href="" class="header-top-btn header-top-btn-reg btn btn-light" data-href="#reg-popup" data-toggle="modal"
+                   data-target="#reg-popup">Регистрация</a>
+            </div>
+        </div>
+    </div>
+    <nav id="js-menu-wrapper" class="header-menu-wrapper">
+        <div class="container header-menu-container">
+            <button id="js-menu-btn" class="header-menu-btn" type="button">
+                <span class="header-menu-btn-item header-menu-btn-item-1"></span>
+                <span class="header-menu-btn-item header-menu-btn-item-2"></span>
+                <span class="header-menu-btn-item header-menu-btn-item-3"></span>
+            </button>
+            <ul id="js-menu" class="header-menu">
+                <li class="header-menu-item">
+                    <a href="rooms.html" class="header-menu-link">Биржа номеров</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="map.html" class="header-menu-link">Поиск по карте <img src="img/ico-search.png" alt=""></a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="text-page.html" class="header-menu-link">Правила бронирования</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="text-page.html" class="header-menu-link">Бонусная программа</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="contacts.html" class="header-menu-link">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="page-wrapper">
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rooms.html">Номера</a></li>
+                <li>Название номера</li>
+            </ul>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="product-slider-wrapper">
+                        <div class="swiper-container product-slider-big">
+                            <div class="swiper-wrapper">
+                                <a href="img/img-room-1.jpg" data-fancybox="gallery" class="swiper-slide product-slide-big">
+                                    <img src="img/img-room-1.jpg" alt="">
+                                </a>
+                                <a href="img/img-room-2.jpg" data-fancybox="gallery" class="swiper-slide product-slide-big">
+                                    <img src="img/img-room-2.jpg" alt="">
+                                </a>
+                                <a href="img/img-room-1.jpg" data-fancybox="gallery" class="swiper-slide product-slide-big">
+                                    <img src="img/img-room-1.jpg" alt="">
+                                </a>
+                                <a href="img/img-room-2.jpg" data-fancybox="gallery" class="swiper-slide product-slide-big">
+                                    <img src="img/img-room-2.jpg" alt="">
+                                </a>
+                                <a href="img/img-room-1.jpg" data-fancybox="gallery" class="swiper-slide product-slide-big">
+                                    <img src="img/img-room-1.jpg" alt="">
+                                </a>
+                                <a href="img/img-room-2.jpg" data-fancybox="gallery" class="swiper-slide product-slide-big">
+                                    <img src="img/img-room-2.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-slider-small-wrapper">
+                            <div class="swiper-container product-slider-small">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide product-slide-small">
+                                        <img src="img/img-room-sm-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide product-slide-small">
+                                        <img src="img/img-room-sm-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide product-slide-small">
+                                        <img src="img/img-room-sm-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide product-slide-small">
+                                        <img src="img/img-room-sm-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide product-slide-small">
+                                        <img src="img/img-room-sm-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide product-slide-small">
+                                        <img src="img/img-room-sm-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button swiper-button-next product-slider-small-button-next"></div>
+                            <div class="swiper-button swiper-button-prev product-slider-small-button-prev"></div>
+                        </div>
+                        <div class="rating">
+                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                            <div class="rating-dropdown">
+                                <div class="rating-dropdown-in">
+                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                    <ul class="rating-dropdown-content">
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Чистота
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Общий комфорт
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Персонал
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Удобства
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Расположение
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Цена
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stock">
+                            <div class="stock-percents">
+                                <p class="stock-percents-in">10%</p>
+                            </div>
+                            <div class="stock-timer">
+                                <p class="stock-timer-title">До конца акции осталось</p>
+                                <div class="stock-timer-in">
+                                    <p class="stock-timer-in-item">
+                                        <span>00</span>
+                                        <span>дн.</span>
+                                    </p>
+                                    <p class="stock-timer-in-item">
+                                        <span>23</span>
+                                        <span>ч.</span>
+                                    </p>
+                                    <p class="stock-timer-in-item">
+                                        <span>05</span>
+                                        <span>мин.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h1 class="room-name">Номер: Название номера</h1>
+                    <p class="room-hotel-name">Отель “Название отеля”</p>
+                    <p class="room-type">De Luxe</p>
+                    <p class="room-address">ЮВАО, Южнопортовый район, Отель,
+                        ул. 6-я Кожуховская, д.3, к.2</p>
+                    <ul class="room-metro">
+                        <li class="metro"><img src="img/ico-metro-green.png" alt="">Измайловская - 950 м</li>
+                        <li class="metro"><img src="img/ico-metro-red.png" alt="">Измайловская - 950 м</li>
+                        <li class="metro"><img src="img/ico-metro-yellow.png" alt="">Измайловская - 950 м</li>
+                        <li class="metro"><img src="img/ico-metro-blue.png" alt="">Измайловская - 950 м</li>
+                    </ul>
+                    <ul class="room-prices">
+                        <li class="room-prices-item">
+                            <strong class="room-prices-item-price">1 час - от 250 руб.</strong>
+                            <span class="room-prices-item-info">от 2-х часов</span>
+                        </li>
+                        <li class="room-prices-item">
+                            <strong class="room-prices-item-price">Ночь - от 500 руб.</strong>
+                            <span class="room-prices-item-info">с 11:45 до 10:00</span>
+                        </li>
+                        <li class="room-prices-item">
+                            <strong class="room-prices-item-price">Сутки - от 1000 руб.</strong>
+                            <span class="room-prices-item-info">с 14:00 до 12:00</span>
+                        </li>
+                    </ul>
+                    <div class="room-btns-bar">
+                        <a href="" class="btn btn-orange btn-block" data-href="#book-popup" data-toggle="modal"
+                           data-target="#book-popup">Забронировать</a>
+                        <p class="show-tel-wrapper">
+                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Детально о номере</h2>
+            <ul class="details-list">
+                <li>Можно на 1 час</li>
+                <li>Свой балкон/терраса</li>
+                <li>Ванная комната</li>
+                <li>Джакузи/Бассейн</li>
+                <li>Сауна/Хаммам</li>
+                <li>Своя кухня</li>
+                <li>Пилон/Сцена</li>
+                <li>Много зеркал</li>
+                <li>Камин</li>
+                <li>Тематический дизайн</li>
+                <li>Тематические игрушки</li>
+                <li>Круглая кровать</li>
+                <li>Музыкальное оборудование</li>
+                <li>Игровая консоль/Караоке</li>
+                <li>Большой телевизор</li>
+                <li>Более 2-х человек</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">О номере</h2>
+            <div class="text-section">
+                <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке
+                    модели развития. Равным образом укрепление и развитие структуры способствует подготовки и реализации систем массового участия.
+                    Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. С другой стороны дальнейшее
+                    развитие различных форм деятельности требуют определения и уточнения систем массового участия. Не следует, однако забывать,
+                    что сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития.
+                    Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют от нас анализа
+                    новых предложений.</p>
+                <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке
+                    модели развития. Равным образом укрепление и развитие структуры способствует подготовки и реализации систем массового участия.
+                    Таким образом укрепление и развитие структуры позволяет оценить значение систем массового участия. С другой стороны дальнейшее
+                    развитие различных форм деятельности требуют определения и уточнения систем массового участия. Не следует, однако забывать,
+                    что сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития.
+                    Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции требуют от нас анализа
+                    новых предложений.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section-pt-none">
+        <div class="container">
+            <h2 class="section-title orange">Похожие номера</h2>
+            <div class="card-wrapper">
+                <div class="room-card room-card-horizontal">
+                    <div class="rating">
+                        <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                        <div class="rating-dropdown">
+                            <div class="rating-dropdown-in">
+                                <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                <ul class="rating-dropdown-content">
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Чистота
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Общий комфорт
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Персонал
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Удобства
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Расположение
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Цена
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-slider swiper-container js-hotel-card-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"></div>
+                        <div class="swiper-button swiper-button-prev"></div>
+                    </div>
+                    <div class="stock">
+                        <div class="stock-percents">
+                            <p class="stock-percents-in">10%</p>
+                        </div>
+                        <div class="stock-timer">
+                            <p class="stock-timer-title">До конца акции осталось</p>
+                            <div class="stock-timer-in">
+                                <p class="stock-timer-in-item">
+                                    <span>00</span>
+                                    <span>дн.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>23</span>
+                                    <span>ч.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>05</span>
+                                    <span>мин.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-in">
+                        <div class="room-card-content">
+                            <a href="room-page.html" class="room-card-header">
+                                <p class="room-card-title">Номер: Название номера</p>
+                                <p class="room-card-type">De Luxe</p>
+                            </a>
+                            <a href="hotel-page.html" class="room-card-name">Отель “Название отеля”</a>
+                            <p class="room-card-address">Город, Округ, Район</p>
+                            <ul class="room-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.png" alt="">Измайловская - 950 м</li>
+                            </ul>
+                        </div>
+                        <ul class="room-card-prices">
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">1 час</p>
+                                    <p class="room-card-prices-item-price">200 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">от 2-х часов</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Ночь</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">с 11:45 до 10:00</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Сутки</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-time">с 14:00 до 12:00</p>
+                            </li>
+                        </ul>
+                        <div class="room-card-btns">
+                            <p class="show-tel-wrapper">
+                                <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                                <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                            </p>
+                            <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="room-card room-card-horizontal">
+                    <div class="rating">
+                        <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                        <div class="rating-dropdown">
+                            <div class="rating-dropdown-in">
+                                <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                <ul class="rating-dropdown-content">
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Чистота
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Общий комфорт
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Персонал
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Удобства
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Расположение
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Цена
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-slider swiper-container js-hotel-card-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"></div>
+                        <div class="swiper-button swiper-button-prev"></div>
+                    </div>
+                    <div class="stock">
+                        <div class="stock-percents">
+                            <p class="stock-percents-in">10%</p>
+                        </div>
+                        <div class="stock-timer">
+                            <p class="stock-timer-title">До конца акции осталось</p>
+                            <div class="stock-timer-in">
+                                <p class="stock-timer-in-item">
+                                    <span>00</span>
+                                    <span>дн.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>23</span>
+                                    <span>ч.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>05</span>
+                                    <span>мин.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-in">
+                        <div class="room-card-content">
+                            <a href="room-page.html" class="room-card-header">
+                                <p class="room-card-title">Номер: Название номера</p>
+                                <p class="room-card-type">De Luxe</p>
+                            </a>
+                            <a href="hotel-page.html" class="room-card-name">Отель “Название отеля”</a>
+                            <p class="room-card-address">Город, Округ, Район</p>
+                            <ul class="room-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.png" alt="">Измайловская - 950 м</li>
+                            </ul>
+                        </div>
+                        <ul class="room-card-prices">
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">1 час</p>
+                                    <p class="room-card-prices-item-price">200 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">от 2-х часов</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Ночь</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">с 11:45 до 10:00</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Сутки</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-time">с 14:00 до 12:00</p>
+                            </li>
+                        </ul>
+                        <div class="room-card-btns">
+                            <p class="show-tel-wrapper">
+                                <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                                <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                            </p>
+                            <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="room-card room-card-horizontal">
+                    <div class="rating">
+                        <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                        <div class="rating-dropdown">
+                            <div class="rating-dropdown-in">
+                                <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                <ul class="rating-dropdown-content">
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Чистота
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Общий комфорт
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Персонал
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Удобства
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Расположение
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Цена
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-slider swiper-container js-hotel-card-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"></div>
+                        <div class="swiper-button swiper-button-prev"></div>
+                    </div>
+                    <div class="stock">
+                        <div class="stock-percents">
+                            <p class="stock-percents-in">10%</p>
+                        </div>
+                        <div class="stock-timer">
+                            <p class="stock-timer-title">До конца акции осталось</p>
+                            <div class="stock-timer-in">
+                                <p class="stock-timer-in-item">
+                                    <span>00</span>
+                                    <span>дн.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>23</span>
+                                    <span>ч.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>05</span>
+                                    <span>мин.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-in">
+                        <div class="room-card-content">
+                            <a href="room-page.html" class="room-card-header">
+                                <p class="room-card-title">Номер: Название номера</p>
+                                <p class="room-card-type">De Luxe</p>
+                            </a>
+                            <a href="hotel-page.html" class="room-card-name">Отель “Название отеля”</a>
+                            <p class="room-card-address">Город, Округ, Район</p>
+                            <ul class="room-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.png" alt="">Измайловская - 950 м</li>
+                            </ul>
+                        </div>
+                        <ul class="room-card-prices">
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">1 час</p>
+                                    <p class="room-card-prices-item-price">200 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">от 2-х часов</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Ночь</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">с 11:45 до 10:00</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Сутки</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-time">с 14:00 до 12:00</p>
+                            </li>
+                        </ul>
+                        <div class="room-card-btns">
+                            <p class="show-tel-wrapper">
+                                <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                                <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                            </p>
+                            <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="room-card room-card-horizontal">
+                    <div class="rating">
+                        <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                        <div class="rating-dropdown">
+                            <div class="rating-dropdown-in">
+                                <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                <ul class="rating-dropdown-content">
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Чистота
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Общий комфорт
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Персонал
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Удобства
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Расположение
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Цена
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-slider swiper-container js-hotel-card-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"></div>
+                        <div class="swiper-button swiper-button-prev"></div>
+                    </div>
+                    <div class="stock">
+                        <div class="stock-percents">
+                            <p class="stock-percents-in">10%</p>
+                        </div>
+                        <div class="stock-timer">
+                            <p class="stock-timer-title">До конца акции осталось</p>
+                            <div class="stock-timer-in">
+                                <p class="stock-timer-in-item">
+                                    <span>00</span>
+                                    <span>дн.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>23</span>
+                                    <span>ч.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>05</span>
+                                    <span>мин.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-in">
+                        <div class="room-card-content">
+                            <a href="room-page.html" class="room-card-header">
+                                <p class="room-card-title">Номер: Название номера</p>
+                                <p class="room-card-type">De Luxe</p>
+                            </a>
+                            <a href="hotel-page.html" class="room-card-name">Отель “Название отеля”</a>
+                            <p class="room-card-address">Город, Округ, Район</p>
+                            <ul class="room-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.png" alt="">Измайловская - 950 м</li>
+                            </ul>
+                        </div>
+                        <ul class="room-card-prices">
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">1 час</p>
+                                    <p class="room-card-prices-item-price">200 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">от 2-х часов</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Ночь</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">с 11:45 до 10:00</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Сутки</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-time">с 14:00 до 12:00</p>
+                            </li>
+                        </ul>
+                        <div class="room-card-btns">
+                            <p class="show-tel-wrapper">
+                                <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                                <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                            </p>
+                            <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="room-card room-card-horizontal">
+                    <div class="rating">
+                        <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                        <div class="rating-dropdown">
+                            <div class="rating-dropdown-in">
+                                <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                <ul class="rating-dropdown-content">
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Чистота
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Общий комфорт
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Персонал
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Удобства
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Расположение
+                                    </li>
+                                    <li class="rating-dropdown-item">
+                                        <span>9.7</span>Цена
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-slider swiper-container js-hotel-card-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img-hotel.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button swiper-button-next"></div>
+                        <div class="swiper-button swiper-button-prev"></div>
+                    </div>
+                    <div class="stock">
+                        <div class="stock-percents">
+                            <p class="stock-percents-in">10%</p>
+                        </div>
+                        <div class="stock-timer">
+                            <p class="stock-timer-title">До конца акции осталось</p>
+                            <div class="stock-timer-in">
+                                <p class="stock-timer-in-item">
+                                    <span>00</span>
+                                    <span>дн.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>23</span>
+                                    <span>ч.</span>
+                                </p>
+                                <p class="stock-timer-in-item">
+                                    <span>05</span>
+                                    <span>мин.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-card-in">
+                        <div class="room-card-content">
+                            <a href="room-page.html" class="room-card-header">
+                                <p class="room-card-title">Номер: Название номера</p>
+                                <p class="room-card-type">De Luxe</p>
+                            </a>
+                            <a href="hotel-page.html" class="room-card-name">Отель “Название отеля”</a>
+                            <p class="room-card-address">Город, Округ, Район</p>
+                            <ul class="room-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.png" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.png" alt="">Измайловская - 950 м</li>
+                            </ul>
+                        </div>
+                        <ul class="room-card-prices">
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">1 час</p>
+                                    <p class="room-card-prices-item-price">200 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">от 2-х часов</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Ночь</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-info">с 11:45 до 10:00</p>
+                            </li>
+                            <li class="room-card-prices-item">
+                                <div>
+                                    <p class="room-card-prices-item-title">Сутки</p>
+                                    <p class="room-card-prices-item-price-old">200 руб.</p>
+                                    <p class="room-card-prices-item-price-new">450 руб.</p>
+                                </div>
+                                <p class="room-card-prices-item-time">с 14:00 до 12:00</p>
+                            </li>
+                        </ul>
+                        <div class="room-card-btns">
+                            <p class="show-tel-wrapper">
+                                <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                                <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                            </p>
+                            <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more">
+                <p class="show-more-counter">Загружено: 30 (150)</p>
+                <button class="show-more-btn" type="button">Загрузить еще</button>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="footer">
+    <div class="container footer-container">
+        <ul class="footer-menu">
+            <li class="footer-menu-item">
+                <a href="index.html" class="footer-menu-link">Главная</a>
+            </li>
+            <li class="footer-menu-item">
+                <a href="rooms.html" class="footer-menu-link">Номера</a>
+            </li>
+            <li class="footer-menu-item">
+                <a href="hotels.html" class="footer-menu-link">Отели</a>
+            </li>
+            <li class="footer-menu-item">
+                <a href="map.html" class="footer-menu-link">Поиск по карте</a>
+            </li>
+            <li class="footer-menu-item">
+                <a href="text-page.html" class="footer-menu-link">Правила бронирования</a>
+            </li>
+            <li class="footer-menu-item">
+                <a href="text-page.html" class="footer-menu-link">Бонусная программа</a>
+            </li>
+            <li class="footer-menu-item">
+                <a href="contacts.html" class="footer-menu-link">Контакты</a>
+            </li>
+        </ul>
+        <div class="footer-bottom">
+            <div class="footer-contacts">
+                <a href="tel:+74955996674" class="footer-contacts-item footer-contacts-item-tel">
+                    <span>+7 (495) 599 66 74</span>
+                </a>
+                <a href="mailto:otelipochasam@mail.ru" class="footer-contacts-item footer-contacts-item-email">
+                    <span>otelipochasam@mail.ru</span>
+                </a>
+                <p class="footer-contacts-item footer-contacts-item-address">г. Москва ул. Первая, д.123, оф. 265</p>
+            </div>
+            <div class="footer-soc">
+                <a href="" class="footer-soc-link">
+                    <img src="img/ico-facebook.png" alt="">
+                </a>
+                <a href="" class="footer-soc-link">
+                    <img src="img/ico-twitter.png" alt="">
+                </a>
+                <a href="" class="footer-soc-link">
+                    <img src="img/ico-google.png" alt="">
+                </a>
+                <a href="" class="footer-soc-link">
+                    <img src="img/ico-youtube.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="signin-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title">Раздел находится в разработке</h3>
+        </div>
+    </div>
+</div>
+<div id="reg-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title">Раздел находится в разработке</h3>
+        </div>
+    </div>
+</div>
+<div id="obj-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title">Раздел находится в разработке</h3>
+        </div>
+    </div>
+</div>
+<div id="book-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog book-modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title">Вы выбрали номер “Назване номера”, De Lux, в “Гранд отель”</h3>
+            <form id="book-form" class="book-form">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="book-name" class="form-control-label">Имя<span>*</span></label>
+                            <input id="book-name" name="book-name" type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="book-tel" class="form-control-label">+7 (___) ___ __ __<span>*</span></label>
+                            <input id="book-tel" name="book-tel" type="tel" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="book-email" class="form-control-label">E-mail</label>
+                            <input id="book-email" name="book-email" type="email" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-xl-4 col-xl-8">
+                        <div class="form-group">
+                            <label for="book-comment" class="form-control-label">Комментарий</label>
+                            <textarea name="book-comment" id="book-comment" class="form-control"></textarea>
+                        </div>
+            
+                        <p class="form-disclaimer">Нажимая &laquo;Забронировать&raquo; Вы даете согласие на&nbsp;обработку
+                            персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
+                                конфиденциальности</a>.</p>
+                        <button class="btn btn-orange btn-big btn-form" type="submit">Забронировать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/bootstrap-modal-tabs-collapse-transition.min.js" defer></script>
+<script src="js/swiper.min.js" defer></script>
+<script src="js/jquery.fancybox.min.js" defer></script>
+<script src="js/jquery.maskedinput.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
