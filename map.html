@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid-validation-modal-tabs-print.css">
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -72,8 +74,19 @@
     <section class="section">
         <div class="container">
             <h1 class="section-title">Поиск по карте</h1>
-            <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6b82761ba1c2a8cf4d4bb58649b04e46950fcdf38d4786298c918349b9a84932&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+            <div class="map-search-wrapper">
+                <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6b82761ba1c2a8cf4d4bb58649b04e46950fcdf38d4786298c918349b9a84932&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+                <div class="map-popup">
+                    <div class="map-popup-in">
+                        <img src="img/img-map-popup.jpg" alt="" class="map-popup-img">
+                        <div class="map-popup-content">
+                            <p class="map-popup-title">Отель “Название отеля”</p>
+                            <a href="rooms.html" class="btn btn-blue map-popup-btn">Посмотреть номера</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -754,6 +767,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/bootstrap-modal-tabs-collapse-transition.min.js" defer></script>
 <script src="js/swiper.min.js" defer></script>
+<script src="js/jquery.formstyler.min.js" defer></script>
+<script src="js/datepicker.min.js" defer></script>
 <script src="js/jquery.fancybox.min.js" defer></script>
 <script src="js/jquery.maskedinput.js" defer></script>
 <script src="js/main.js" defer></script>

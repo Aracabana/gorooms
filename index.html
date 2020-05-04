@@ -11,6 +11,8 @@
     <title>GoRooms</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid-validation-modal-tabs-print.css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -60,6 +62,65 @@
     </nav>
 </header>
 <div class="page-wrapper">
+    <section id="js-search" class="search">
+        <div class="container">
+            <form id="search-form" class="search-form">
+                <div class="search-form-group">
+                    <input type="search" id="search" name="search" class="search-input" required placeholder="Название отеля, округ, район город, метро">
+                    <button class="btn btn-orange search-btn">Найти</button>
+                </div>
+                <div class="search-tags">
+                    <div class="search-tag">
+                        <span>Москва, метро Домодедово</span>
+                        <button class="search-tag-btn" type="button">
+                            <img src="img/ico-cross-white.png" alt="">
+                        </button>
+                    </div>
+                    <div class="search-tag">
+                        <span>Москва, метро Домодедово</span>
+                        <button class="search-tag-btn" type="button">
+                            <img src="img/ico-cross-white.png" alt="">
+                        </button>
+                    </div>
+                    <div class="search-tag">
+                        <span>Москва, метро Домодедово</span>
+                        <button class="search-tag-btn" type="button">
+                            <img src="img/ico-cross-white.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="search-bottom">
+                    <div class="search-dates">
+                        <div class="form-group-date">
+                            <p class="form-group-date-label">Заезд:</p>
+                            <input id="search-from-date" name="search-from-date" type="text" class="form-control form-control-date datepicker-here"
+                                   placeholder="10.06.2020" required>
+                            <select name="search-from-time" id="search-from-time" class="form-control form-control-time" required>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group-date">
+                            <p class="form-group-date-label">Выезд:</p>
+                            <input id="search-to-date" name="search-to-date" type="text" class="form-control form-control-date datepicker-here"
+                                   placeholder="10.06.2020" required>
+                            <select name="search-to-time" id="search-to-time" class="form-control form-control-time" required>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="js-advanced-search-open-btn" class="advanced-search-btn advanced-search-btn-open">Расширеный поиск</button>
+                </div>
+            </form>
+        </div>
+    </section>
     <section class="home-section home-section-pt-lg">
         <div class="container">
             <h2 class="section-title">Популярные отели</h2>
@@ -472,7 +533,8 @@
                                     <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
                                     <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
                                 </p>
-                                <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                                <a href="" class="btn btn-orange btn-block" data-href="#book-popup" data-toggle="modal"
+                                   data-target="#book-popup">Забронировать</a>
                             </div>
                         </div>
                     </div>
@@ -586,7 +648,8 @@
                                     <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
                                     <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
                                 </p>
-                                <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                                <a href="" class="btn btn-orange btn-block" data-href="#book-popup" data-toggle="modal"
+                                   data-target="#book-popup">Забронировать</a>
                             </div>
                         </div>
                     </div>
@@ -700,7 +763,8 @@
                                     <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
                                     <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
                                 </p>
-                                <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                                <a href="" class="btn btn-orange btn-block" data-href="#book-popup" data-toggle="modal"
+                                   data-target="#book-popup">Забронировать</a>
                             </div>
                         </div>
                     </div>
@@ -814,7 +878,8 @@
                                     <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
                                     <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
                                 </p>
-                                <a href="" class="btn btn-orange btn-block">Забронировать</a>
+                                <a href="" class="btn btn-orange btn-block" data-href="#book-popup" data-toggle="modal"
+                                   data-target="#book-popup">Забронировать</a>
                             </div>
                         </div>
                     </div>
@@ -1004,9 +1069,76 @@
         </div>
     </div>
 </div>
+<div id="book-popup" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog book-modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
+            <h3 class="modal-title">Вы выбрали номер “Назване номера”, De Lux, в “Гранд отель”</h3>
+            <form id="book-form" class="book-form">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <input id="book-name" name="book-name" type="text" class="form-control" placeholder="Имя*" required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <input id="book-tel" name="book-tel" type="tel" class="form-control" placeholder="+7 (___) ___ __ __*">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <input id="book-email" name="book-email" type="email" class="form-control" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group form-group-dates">
+                            <div class="form-group-date">
+                                <p class="form-group-date-label">Заезд:<span>*</span></p>
+                                <input id="from-date" name="from-date" type="text" class="form-control form-control-date datepicker-here"
+                                       placeholder="10.06.2020" required>
+                                <select name="from-time" id="from-time" class="form-control form-control-time" required>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group-date">
+                                <p class="form-group-date-label">Выезд:<span>*</span></p>
+                                <input id="to-date" name="to-date" type="text" class="form-control form-control-date datepicker-here"
+                                       placeholder="10.06.2020" required>
+                                <select name="to-time" id="to-time" class="form-control form-control-time" required>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <textarea name="book-comment" id="book-comment" class="form-control" placeholder="Комментарий"></textarea>
+                        </div>
+                        
+                        <p class="form-disclaimer">Нажимая &laquo;Забронировать&raquo; Вы даете согласие на&nbsp;обработку
+                            персональных данных и&nbsp;соглашаетесь c&nbsp;<a href="text-page.html">пользовательским соглашением и&nbsp;политикой
+                                конфиденциальности</a>.</p>
+                        <button class="btn btn-orange btn-big btn-form" type="submit">Забронировать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/bootstrap-modal-tabs-collapse-transition.min.js" defer></script>
+<script src="js/jquery.formstyler.min.js" defer></script>
+<script src="js/datepicker.min.js" defer></script>
 <script src="js/swiper.min.js" defer></script>
 <script src="js/jquery.maskedinput.js" defer></script>
 <script src="js/main.js" defer></script>

@@ -161,7 +161,38 @@
             margin-right: auto;
         }
     }
+    /*date*/
+    .form-group-dates {
+        .flex();
+        .align-items-center();
+        .flex-start();
+        .form-group-date {
+            margin-bottom: 0;
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
     /*=HOME=*/
+    /*Search*/
+    .search-form {
+        padding: 15px;
+    }
+    .search-tags {
+        padding: 10px 0;
+    }
+    .search-tag {
+        margin-right: 20px;
+        padding: 5px 0;
+    }
+    .search-dates {
+        .flex-start();
+        margin-bottom: 15px;
+    }
+    .search-bottom {
+        display: block;
+    }
     /*Fire*/
     .room-card-horizontal {
         display: block;
@@ -369,7 +400,41 @@
         position: static;
         margin: 0 auto;
     }
+    /*date*/
+    .form-group-dates {
+        display: block;
+        .form-group-date {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+    }
     /*=HOME=*/
+    /*Search*/
+    .search-btn {
+        .flex-shrink(0);
+        .flex-grow(0);
+        width: 116px;
+    }
+    .search-form {
+        padding: 10px;
+    }
+    .search-tags {
+        padding: 5px 0;
+    }
+    .search-tag {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+    .search-dates {
+        display: block;
+        .form-group-date {
+            margin-left: 0;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
     /*Fire*/
     .stock {
         height: 65px;
@@ -453,6 +518,16 @@
     .details-list {
         column-count: 2;
     }
+    /*=MAP=*/
+    .map-popup {
+        max-width: 280px;
+        &-img {
+            width: 80px;
+        }
+        &-content {
+            padding: 0 0 0 10px;
+        }
+    }
     /*=404=*/
     .error-title {
         font-size: 228px;
@@ -470,7 +545,7 @@
     }
     /*=MODALS=*/
     .modal-content {
-        padding: 20px 15px;
+        padding: 30px 15px;
     }
     button.modal-close {
         top: 10px;
@@ -486,6 +561,10 @@
         &-item {
             max-width: none;
         }
+    }
+    /*=LINKS&FORMS=*/
+    .btn-form {
+        margin: 0 auto;
     }
     /*=HOME=*/
     /*Popular*/
@@ -623,6 +702,16 @@
     }
 }
 @media (max-width: 380px) {
+    /*=LINKS&FORMS=*/
+    /*date*/
+    .form-group-date {
+        .flex-wrap();
+        &-label {
+            margin-right: 0;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+    }
     /*=HOME=*/
     /*Fire*/
     .stock {
@@ -695,5 +784,9 @@
         p {
             font-size: 16px;
         }
+    }
+    /*=MODALS=*/
+    .modal-title {
+        font-size: 16px;
     }
 }
