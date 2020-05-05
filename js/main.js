@@ -14,15 +14,19 @@ $(document).ready(function () {
    
     //scroll search
     $(window).scroll(function () {
-        fixMenu();
+        fixSearch();
     });
-    fixMenu();
-    function fixMenu() {
+    fixSearch();
+    function fixSearch() {
         if ($(window).scrollTop() >= searchTop) {
             search.addClass('fixed');
         } else {
             search.removeClass('fixed');
         }
+        var datepicker = $('.datepicker-here').datepicker().data('datepicker');
+        datepicker.update({
+            position: "bottom left"
+        })
     }
     
     //mobile menu
@@ -118,12 +122,14 @@ $(document).ready(function () {
     }
     
     //advanced-search
-    $('#js-advanced-search-open-btn').click(function (e) {
+    $('#js-advanced-search-open-btn').on('click', function (e) {
         e.stopPropagation();
+        e.preventDefault();
         $(this).closest('#js-search').find('#js-advanced-search').slideDown();
     });
-    $('#js-advanced-search-close-btn').click(function (e) {
+    $('#js-advanced-search-close-btn').on('click', function (e) {
         e.stopPropagation();
+        e.preventDefault();
         $(this).closest('#js-advanced-search').slideUp();
     });
 });

@@ -3654,6 +3654,11 @@ button.modal-close:focus {
     display: block;
   }
   .search-filter {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding-left: 0;
     max-width: none;
   }
   /*=FOOTER=*/
@@ -3938,6 +3943,9 @@ button.modal-close:focus {
   .hotel-tabs-item a {
     font-size: 14px;
   }
+  .hotel-map-wrapper {
+    margin-top: 30px;
+  }
   .total-rating-main {
     margin-right: 20px;
     width: 140px;
@@ -3972,7 +3980,8 @@ button.modal-close:focus {
     flex-wrap: wrap;
   }
   .search-filter-item {
-    width: 48%;
+    margin-left: 0;
+    width: 47%;
   }
   .search-filter-item:last-child {
     margin-top: 15px;
@@ -4232,6 +4241,14 @@ button.modal-close:focus {
   }
   .map-popup-content {
     padding: 0 0 0 10px;
+  }
+  /*=SEARCH=*/
+  .search-filter {
+    display: block;
+  }
+  .search-filter-item {
+    margin-top: 15px;
+    width: 100%;
   }
   /*=404=*/
   .error-title {
