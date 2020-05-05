@@ -2,6 +2,23 @@
 /*==========RESPONSIVE==========*/
 @media (max-width: 1219px) {
     /*=HOME=*/
+    /*Search*/
+    .advanced-search {
+        &-location {
+            max-width: none;
+        }
+        &-prices {
+            max-width: none;
+        }
+        &-filter {
+            .flex-wrap();
+            padding-bottom: 5px;
+            &-item {
+                margin-bottom: 10px;
+                width: 50%;
+            }
+        }
+    }
     /*About*/
     .about {
         padding: 100px 0;
@@ -192,6 +209,28 @@
     }
     .search-bottom {
         display: block;
+    }
+    .advanced-search {
+        padding-bottom: 20px;
+        &-details-col {
+            &:first-child {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                &::after {
+                    width: 100%;
+                    height: 1px;
+                    background-color: #ffffff;
+                }
+            }
+        }
+        .search-filter-label + .hotel-rating {
+            margin-top: 5px;
+            margin-left: 0;
+        }
+        .search-bottom-in {
+            .flex-start();
+            margin-bottom: 20px;
+        }
     }
     /*Fire*/
     .room-card-horizontal {
@@ -435,6 +474,27 @@
             }
         }
     }
+    .advanced-search {
+        &-prices {
+            padding-bottom: 0;
+            &-in {
+                margin-bottom: 20px;
+                width: 50%;
+                &-label {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &-filter {
+            &-item {
+                width: 100%;
+            }
+        }
+        .search-filter-label + .hotel-rating {
+            margin-top: 0;
+            margin-left: 5px;
+        }
+    }
     /*Fire*/
     .stock {
         height: 65px;
@@ -567,6 +627,21 @@
         margin: 0 auto;
     }
     /*=HOME=*/
+    /*Search*/
+    .advanced-search {
+        &-reset-btn {
+            margin-right: 10px;
+            padding: 10px;
+        }
+        &-ico-btn {
+            &-favorite {
+                margin-right: 20px;
+            }
+            &-map {
+                margin-right: 10px;
+            }
+        }
+    }
     /*Popular*/
     .hotel-card-sm {
         &-slider {
@@ -597,6 +672,24 @@
     }
 }
 @media (max-width: 520px) {
+    /*=HOME=*/
+    /*Search*/
+    .advanced-search {
+        &-reset-btn {
+            margin-right: 0;
+            margin-left: auto;
+        }
+        .search-bottom-in {
+            .flex-wrap();
+            .btn {
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+        &-details-list {
+            column-count: 2;
+        }
+    }
     /*=404=*/
     .error-title {
         font-size: 200px;
@@ -667,6 +760,13 @@
 }
 @media (max-width: 440px) {
     /*=HOME=*/
+    /*Search*/
+    .advanced-search {
+        .search-filter-label + .hotel-rating {
+            margin-top: 5px;
+            margin-left: 0;
+        }
+    }
     /*Fire*/
     .room-card {
         &-header {
@@ -713,6 +813,31 @@
         }
     }
     /*=HOME=*/
+    /*Search*/
+    .search-input {
+        padding: 0 10px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .search-btn {
+        width: 80px;
+        height: 30px;
+    }
+    .search-tags {
+        padding: 5px 0;
+    }
+    .search-tag {
+        margin-right: 10px;
+        font-size: 9px;
+        span {
+            margin-right: 2px;
+        }
+        button {
+            img {
+                width: 12px;
+            }
+        }
+    }
     /*Fire*/
     .stock {
         position: static;
@@ -768,6 +893,27 @@
     }
 }
 @media (max-width: 360px) {
+    /*=HOME=*/
+    /*Search*/
+    .advanced-search {
+        &-prices {
+            &-in {
+                width: 100%;
+            }
+        }
+        &-details-list {
+            column-count: 1;
+        }
+        .search-filter-label {
+            &::after {
+                display: none;
+            }
+            &-fire,
+            &-cashback {
+                padding-left: 25px;
+            }
+        }
+    }
     /*=HOTEL-PAGE=*/
     .stars label {
         width: 20px;
@@ -788,5 +934,30 @@
     /*=MODALS=*/
     .modal-title {
         font-size: 16px;
+    }
+}
+@media (max-width: 1219px) and (max-height: 1010px) {
+    .advanced-search {
+        max-height: 870px;
+    }
+}
+@media (max-height: 880px) {
+    .advanced-search {
+        max-height: 700px;
+    }
+}
+@media (max-height: 715px) {
+    .advanced-search {
+        max-height: 550px;
+    }
+}
+@media (max-height: 600px) {
+    .advanced-search {
+        max-height: 450px;
+    }
+}
+@media (max-height: 460px) {
+    .advanced-search {
+        max-height: 300px;
     }
 }

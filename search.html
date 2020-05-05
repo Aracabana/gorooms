@@ -62,6 +62,469 @@
     </nav>
 </header>
 <div class="page-wrapper">
+    <section id="js-search" class="search">
+        <div class="container">
+            <form id="search-form" class="search-form">
+                <div class="search-form-group">
+                    <input type="search"
+                           id="search"
+                           name="search"
+                           class="search-input"
+                           placeholder="Название отеля, округ, район город, метро">
+                    <button class="btn btn-orange search-btn">Найти</button>
+                </div>
+                <div class="search-tags">
+                    <div class="search-tag">
+                        <span>Москва, метро Домодедово</span>
+                        <button class="search-tag-btn" type="button">
+                            <img src="img/ico-cross-white.png" alt="">
+                        </button>
+                    </div>
+                    <div class="search-tag">
+                        <span>Москва, метро Домодедово</span>
+                        <button class="search-tag-btn" type="button">
+                            <img src="img/ico-cross-white.png" alt="">
+                        </button>
+                    </div>
+                    <div class="search-tag">
+                        <span>Москва, метро Домодедово</span>
+                        <button class="search-tag-btn" type="button">
+                            <img src="img/ico-cross-white.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="search-bottom">
+                    <div class="search-dates">
+                        <div class="form-group-date">
+                            <p class="form-group-date-label">Заезд:</p>
+                            <input id="search-from-date" name="search-from-date" type="text" class="form-control form-control-date datepicker-here"
+                                   placeholder="10.06.2020" required>
+                            <select name="search-from-time" id="search-from-time" class="form-control form-control-time" required>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group-date">
+                            <p class="form-group-date-label">Выезд:</p>
+                            <input id="search-to-date" name="search-to-date" type="text" class="form-control form-control-date datepicker-here"
+                                   placeholder="10.06.2020" required>
+                            <select name="search-to-time" id="search-to-time" class="form-control form-control-time" required>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="js-advanced-search-open-btn" class="advanced-search-btn advanced-search-btn-open">Расширеный поиск</button>
+                </div>
+            </form>
+        </div>
+        <div id="js-advanced-search" class="advanced-search">
+            <div class="container">
+                <form id="advanced-search-form" class="advanced-search-form">
+                    <div class="search-form-group">
+                        <input type="search" id="advanced-search" name="search" class="search-input"
+                               placeholder="Название отеля, округ, район город, метро">
+                        <button class="btn btn-orange search-btn">Найти</button>
+                    </div>
+                    <div class="search-tags">
+                        <div class="search-tag">
+                            <span>Москва, метро Домодедово</span>
+                            <button class="search-tag-btn" type="button">
+                                <img src="img/ico-cross-blue.png" alt="">
+                            </button>
+                        </div>
+                        <div class="search-tag">
+                            <span>Москва, метро Домодедово</span>
+                            <button class="search-tag-btn" type="button">
+                                <img src="img/ico-cross-blue.png" alt="">
+                            </button>
+                        </div>
+                        <div class="search-tag">
+                            <span>Москва, метро Домодедово</span>
+                            <button class="search-tag-btn" type="button">
+                                <img src="img/ico-cross-blue.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="search-dates">
+                        <div class="form-group-date">
+                            <p class="form-group-date-label">Заезд:</p>
+                            <input id="advanced-search-from-date" name="advanced-search-from-date" type="text"
+                                   class="form-control form-control-date datepicker-here"
+                                   placeholder="10.06.2020" required>
+                            <select name="advanced-search-from-time" id="advanced-search-from-time" class="form-control form-control-time" required>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group-date">
+                            <p class="form-group-date-label">Выезд:</p>
+                            <input id="advanced-search-to-date" name="advanced-search-to-date" type="text"
+                                   class="form-control form-control-date datepicker-here"
+                                   placeholder="10.06.2020" required>
+                            <select name="advanced-search-to-time" id="advanced-search-to-time" class="form-control form-control-time" required>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row align-items-end">
+                        <div class="col-xl-4 advanced-search-location-wrapper">
+                            <div class="advanced-search-location">
+                                <p class="advanced-search-title">Расположение</p>
+                                <div class="form-group">
+                                    <select name="advanced-search-location-city" id="advanced-search-location-city" class="form-control"
+                                            data-placeholder="Город">
+                                        <option value=""></option>
+                                        <option value="city1">Город 1</option>
+                                        <option value="city2">Город 2</option>
+                                        <option value="city3">Город 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="advanced-search-location-district" id="advanced-search-location-district" class="form-control"
+                                            data-placeholder="Округ">
+                                        <option value=""></option>
+                                        <option value="district1">Округ 1</option>
+                                        <option value="district2">Округ 2</option>
+                                        <option value="district3">Округ 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="advanced-search-location-region" id="advanced-search-location-region" class="form-control"
+                                            data-placeholder="Район">
+                                        <option value=""></option>
+                                        <option value="region1">Район 1</option>
+                                        <option value="region2">Район 2</option>
+                                        <option value="region3">Район 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="advanced-search-location-metro" id="advanced-search-location-metro" class="form-control"
+                                            data-placeholder="Метро">
+                                        <option value=""></option>
+                                        <option value="metro1">Метро 1</option>
+                                        <option value="metro2">Метро 2</option>
+                                        <option value="metro3">Метро 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="advanced-search-location-type" id="advanced-search-location-type" class="form-control"
+                                            data-placeholder="Тип размещения">
+                                        <option value=""></option>
+                                        <option value="type1">Тип размещения 1</option>
+                                        <option value="type2">Тип размещения 2</option>
+                                        <option value="type3">Тип размещения 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 advanced-search-prices-wrapper">
+                            <div class="advanced-search-prices">
+                                <p class="advanced-search-title">По цене</p>
+                                <div class="advanced-search-prices-in">
+                                    <p class="advanced-search-prices-in-label">Период размещения:</p>
+                                    <ul class="advanced-search-prices-list">
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-1" name="advanced-search-prices-1" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-1" class="checkbox-label checkbox-label-orange">На час</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-2" name="advanced-search-prices-2" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-2" class="checkbox-label checkbox-label-orange">На ночь</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-3" name="advanced-search-prices-3" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-3" class="checkbox-label checkbox-label-orange">На сутки</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-4" name="advanced-search-prices-4" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-4" class="checkbox-label checkbox-label-orange">23 часа</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="advanced-search-prices-in">
+                                    <p class="advanced-search-prices-in-label">На час:</p>
+                                    <ul class="advanced-search-prices-list">
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-1-1" name="advanced-search-prices-1-1" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-1-1" class="checkbox-label checkbox-label-orange">до 600 р.</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-1-2" name="advanced-search-prices-1-2" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-1-2" class="checkbox-label checkbox-label-orange">600 р.- 900 р</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-1-3" name="advanced-search-prices-1-3" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-1-3" class="checkbox-label checkbox-label-orange">900 р. - 1200 р</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-1-4" name="advanced-search-prices-1-4" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-1-4" class="checkbox-label checkbox-label-orange">от 1200 р.</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="advanced-search-prices-in">
+                                    <p class="advanced-search-prices-in-label">На ночь:</p>
+                                    <ul class="advanced-search-prices-list">
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-2-1" name="advanced-search-prices-2-1" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-2-1" class="checkbox-label checkbox-label-orange">до 600 р.</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-2-2" name="advanced-search-prices-2-2" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-2-2" class="checkbox-label checkbox-label-orange">600 р.- 900 р</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-2-3" name="advanced-search-prices-2-3" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-2-3" class="checkbox-label checkbox-label-orange">900 р. - 1200
+                                                р</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-2-4" name="advanced-search-prices-2-4" type="checkbox" class="checkbox">
+                                            <label for="advanced-search-prices-2-4" class="checkbox-label checkbox-label-orange">от 1200 р.</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="advanced-search-prices-in disabled">
+                                    <p class="advanced-search-prices-in-label">На сутки/23часа:</p>
+                                    <ul class="advanced-search-prices-list">
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-3-1" name="advanced-search-prices-3-1" type="checkbox"
+                                                   class="checkbox" disabled>
+                                            <label for="advanced-search-prices-3-1" class="checkbox-label checkbox-label-orange">до 600 р.</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-3-2" name="advanced-search-prices-3-2" type="checkbox"
+                                                   class="checkbox" disabled>
+                                            <label for="advanced-search-prices-3-2" class="checkbox-label checkbox-label-orange">600 р.- 900 р</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-3-3" name="advanced-search-prices-3-3" type="checkbox"
+                                                   class="checkbox" disabled>
+                                            <label for="advanced-search-prices-3-3" class="checkbox-label checkbox-label-orange">900 р. - 1200
+                                                р</label>
+                                        </li>
+                                        <li class="advanced-search-prices-item">
+                                            <input id="advanced-search-prices-3-4" name="advanced-search-prices-3-4" type="checkbox"
+                                                   class="checkbox" disabled>
+                                            <label for="advanced-search-prices-3-4" class="checkbox-label checkbox-label-orange">от 1200 р.</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advanced-search-filter">
+                        <div class="advanced-search-filter-item">
+                            <input type="checkbox" id="advanced-search-filter-profitably" class="checkbox checkbox-profitably"
+                                   name="advanced-search-filter-profitably">
+                            <label for="advanced-search-filter-profitably"
+                                   class="search-filter-label search-filter-label-profitably">Выгодно</label>
+                        </div>
+                        <div class="advanced-search-filter-item">
+                            <input type="checkbox" id="advanced-search-filter-cashback" class="checkbox" name="advanced-search-filter-cashback">
+                            <label for="advanced-search-filter-cashback"
+                                   class="search-filter-label search-filter-label-cashback checkbox-label checkbox-label-light">Участие в программе
+                                кэш бэк</label>
+                        </div>
+                        <div class="advanced-search-filter-item">
+                            <input type="checkbox" id="advanced-search-filter-fire" class="checkbox" name="advanced-search-filter-fire">
+                            <label for="advanced-search-filter-fire"
+                                   class="search-filter-label search-filter-label-fire checkbox-label checkbox-label-light">Горящие предложения</label>
+                        </div>
+                        <div class="advanced-search-filter-item">
+                            <label class="search-filter-label">Рейтинг отеля:</label>
+                            <div class="hotel-rating">
+                                <input type="radio" id="advanced-search-hotel-rating-any" name="advanced-search-hotel-rating" value="hotel-rating-any" class="hotel-rating-input">
+                                <label for="advanced-search-hotel-rating-any" class="hotel-rating-label">Любой</label>
+                                
+                                <input type="radio" id="advanced-search-hotel-rating-6" name="advanced-search-hotel-rating" value="hotel-rating-6" class="hotel-rating-input">
+                                <label for="advanced-search-hotel-rating-6" class="hotel-rating-label">6+</label>
+                                
+                                <input type="radio" id="advanced-search-hotel-rating-7" name="advanced-search-hotel-rating" value="hotel-rating-7" class="hotel-rating-input">
+                                <label for="advanced-search-hotel-rating-7" class="hotel-rating-label">7+</label>
+                                
+                                <input type="radio" id="advanced-search-hotel-rating-8" name="advanced-search-hotel-rating" value="hotel-rating-8" class="hotel-rating-input">
+                                <label for="advanced-search-hotel-rating-8" class="hotel-rating-label">8+</label>
+                                
+                                <input type="radio" id="advanced-search-hotel-rating-9" name="advanced-search-hotel-rating" value="hotel-rating-9" class="hotel-rating-input">
+                                <label for="advanced-search-hotel-rating-9" class="hotel-rating-label">9+</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row advanced-search-details">
+                        <div class="col-lg-6 advanced-search-details-col">
+                            <p class="advanced-search-title">Детально об отлеле</p>
+                            <ul class="advanced-search-details-list">
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-1" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-1" class="checkbox-label checkbox-label-light">Своя парковка</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-2" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-2" class="checkbox-label checkbox-label-light">5 минут пешком
+                                        от метро</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-3" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-3" class="checkbox-label checkbox-label-light">До 10 минут
+                                        пешком от метро</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-4" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-4" class="checkbox-label checkbox-label-light">Хранение багажа</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-5" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-5" class="checkbox-label checkbox-label-light">Рум сервис</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-6" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-6" class="checkbox-label checkbox-label-light">Общая кухня</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-7" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-7" class="checkbox-label checkbox-label-light">Бесплатный вай
+                                        фай</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-8" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-8" class="checkbox-label checkbox-label-light">Кабельное
+                                        телевидение</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-9" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-9" class="checkbox-label checkbox-label-light">Зона спа, бассейн</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-10" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-10" class="checkbox-label checkbox-label-light">Услуги массажа</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-11" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-11" class="checkbox-label checkbox-label-light">Можно с
+                                        животными</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-12" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-12" class="checkbox-label checkbox-label-light">Своя террасса/сад</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-13" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-13" class="checkbox-label checkbox-label-light">Зона барбекю/ беседки</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-14" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-14" class="checkbox-label checkbox-label-light">Прокат транспорта</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-hotel-15" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-hotel-15" class="checkbox-label checkbox-label-light">Конференц зал</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 advanced-search-details-col">
+                            <p class="advanced-search-title">Детально о номерах</p>
+                            <ul class="advanced-search-details-list">
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-1" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-1" class="checkbox-label checkbox-label-light">Можно на 1 час</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-2" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-2" class="checkbox-label checkbox-label-light">Свой балкон/
+                                        терраса</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-3" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-3" class="checkbox-label checkbox-label-light">Ванная комната</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-4" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-4" class="checkbox-label checkbox-label-light">Джакузи/
+                                        Бассейн</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-5" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-5" class="checkbox-label checkbox-label-light">Сауна/Хаммам</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-6" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-6" class="checkbox-label checkbox-label-light">Своя кухня</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-7" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-7" class="checkbox-label checkbox-label-light">Пилон/Сценна</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-8" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-8" class="checkbox-label checkbox-label-light">Много зеркал</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-9" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-9" class="checkbox-label checkbox-label-light">Камин</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-10" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-10" class="checkbox-label checkbox-label-light">Тематический
+                                        дизайн</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-11" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-11" class="checkbox-label checkbox-label-light">Тематические
+                                        игрушки</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-12" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-12" class="checkbox-label checkbox-label-light">Круглая кровать</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-13" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-13" class="checkbox-label checkbox-label-light">Музыкальное
+                                        оборудование</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-14" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-14" class="checkbox-label checkbox-label-light">Игровая консоль/
+                                        Караоке</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-15" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-15" class="checkbox-label checkbox-label-light">Большой телевизор</label>
+                                </li>
+                                <li class="advanced-search-details-item">
+                                    <input id="advanced-search-rooms-16" type="checkbox" class="checkbox">
+                                    <label for="advanced-search-rooms-16" class="checkbox-label checkbox-label-light">Более 2-х человек</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search-bottom">
+                        <div class="search-bottom-in">
+                            <button class="advanced-search-ico-btn advanced-search-ico-btn-favorite" type="button"></button>
+                            <button class="advanced-search-ico-btn advanced-search-ico-btn-map" type="button"></button>
+                            <button class="advanced-search-reset-btn" type="reset">Очистить поиск</button>
+                            <button class="btn btn-blue" type="submit">Показать (126)</button>
+                        </div>
+                        <button id="js-advanced-search-close-btn" class="advanced-search-btn advanced-search-btn-close">Свернуть фильтры</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <div class="section">
         <div class="container">
             <div class="section-header">
@@ -747,7 +1210,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
-            <h3 class="modal-title">Раздел находится в разработке</h3>
+            <p class="modal-text-inprogress">Раздел находится в разработке</p>
         </div>
     </div>
 </div>
@@ -755,7 +1218,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
-            <h3 class="modal-title">Раздел находится в разработке</h3>
+            <p class="modal-text-inprogress">Раздел находится в разработке</p>
         </div>
     </div>
 </div>
@@ -763,7 +1226,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close"></button>
-            <h3 class="modal-title">Раздел находится в разработке</h3>
+            <p class="modal-text-inprogress">Раздел находится в разработке</p>
         </div>
     </div>
 </div>

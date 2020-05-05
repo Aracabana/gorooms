@@ -116,4 +116,14 @@ $(document).ready(function () {
     if ($('*').is('select')) {
         $('select').styler();
     }
+    
+    //advanced-search
+    $('#js-advanced-search-open-btn').click(function (e) {
+        e.stopPropagation();
+        $(this).closest('#js-search').find('#js-advanced-search').slideDown();
+    });
+    $('#js-advanced-search-close-btn').click(function (e) {
+        e.stopPropagation();
+        $(this).closest('#js-advanced-search').slideUp();
+    });
 });
