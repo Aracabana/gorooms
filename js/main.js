@@ -1,10 +1,7 @@
 $(document).ready(function () {
     var windowW;
-    var search = $('#js-search');
-    var searchTop;
     $(window).resize(function () {
         windowW = $(window).width();
-        searchTop = search.offset().top;
         if (windowW >= 992) {
             $('#js-menu-btn').removeClass('open');
             $('#js-menu').removeAttr('style');
@@ -13,20 +10,27 @@ $(document).ready(function () {
     $(window).trigger('resize');
    
     //scroll search
-    $(window).scroll(function () {
+    if ($('*').is('#js-search')) {
+        var search = $('#js-search');
+        var searchTop;
+        $(window).resize(function () {
+            searchTop = search.offset().top;
+        });
+        $(window).scroll(function () {
+            fixSearch();
+        });
         fixSearch();
-    });
-    fixSearch();
-    function fixSearch() {
-        if ($(window).scrollTop() >= searchTop) {
-            search.addClass('fixed');
-        } else {
-            search.removeClass('fixed');
+        function fixSearch() {
+            if ($(window).scrollTop() >= searchTop) {
+                search.addClass('fixed');
+            } else {
+                search.removeClass('fixed');
+            }
+            var datepicker = $('.datepicker-here').datepicker().data('datepicker');
+            datepicker.update({
+                position: "bottom left"
+            })
         }
-        var datepicker = $('.datepicker-here').datepicker().data('datepicker');
-        datepicker.update({
-            position: "bottom left"
-        })
     }
     
     //mobile menu
@@ -78,16 +82,6 @@ $(document).ready(function () {
             },
         });
     }
-    
-    //input [type="file"]
-    $('.js-file').change(function () {
-        var file = $(this),
-            fileValue = file.val(),
-            label = file.next('.js-file-label');
-        if (fileValue !== '') {
-            label.text(fileValue);
-        }
-    });
     
     //changing name of more-btn
     if ($('*').is('.content-more')) {

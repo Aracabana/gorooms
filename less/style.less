@@ -368,6 +368,7 @@ h4 {
     perspective: 1200px;
 }
 .swiper-slide {
+    display: block;
     .box-sizing();
     min-height: 100%;
     height: auto;
@@ -924,10 +925,24 @@ select.form-control {
         right: 0;
         z-index: 100;
         margin-top: 0;
-        background-color: @accent-color-2;
         .search-form {
-            padding-left: 0;
-            padding-right: 0;
+            .search-form-group {
+                overflow: hidden;
+                height: 0;
+                opacity: 0;
+            }
+            .search-tags {
+                margin-top: -10px;
+                padding-top: 0;
+                padding-bottom: 10px;
+            }
+        }
+        .search-tag {
+            font-size: 12px;
+            button {
+                width: 12px;
+                height: 12px;
+            }
         }
     }
 }
@@ -984,6 +999,7 @@ select.form-control {
 .search-form-group {
     .flex();
     .space-between();
+    .transition();
 }
 .search-input {
     .box-sizing();
@@ -1010,6 +1026,7 @@ select.form-control {
     .flex-wrap();
     border-bottom: 1px solid #ffffff;
     padding: 15px 0;
+    .transition();
 }
 .search-tag {
     margin-right: 50px;
@@ -1025,6 +1042,7 @@ select.form-control {
         vertical-align: middle;
         img {
             display: block;
+            max-width: 100%;
         }
     }
 }
@@ -1311,7 +1329,6 @@ select.form-control {
         }
     }
 }
-
 /*Popular*/
 .metro {
     font-style: italic;
@@ -1456,7 +1473,7 @@ select.form-control {
         }
     }
 }
-.hotel-card-sm {
+.hotel-card {
     position: relative;
     height: 100%;
     background-color: @bg-color-light;
@@ -1658,6 +1675,14 @@ select.form-control {
             width: 68px;
             height: 1px;
             background-color: @text-color;
+            .transition();
+        }
+        &:hover, &:active {
+            color: @accent-color;
+            &::after {
+                width: 100%;
+                background-color: @accent-color;
+            }
         }
     }
     &-type {
@@ -2186,6 +2211,12 @@ select.form-control {
     font-weight: 700;
     font-size: 18px;
     color: @accent-color-2;
+    a {
+        color: @accent-color-2;
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+    }
 }
 .room-type {
     margin-bottom: 40px;
