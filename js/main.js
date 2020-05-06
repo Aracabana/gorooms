@@ -16,10 +16,19 @@ $(document).ready(function () {
         $(window).resize(function () {
             searchTop = search.offset().top;
         });
+        $(window).trigger('resize');
         $(window).scroll(function () {
             fixSearch();
+            // $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
+            //     var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
+            //     if (delta < 0) {
+            //         console.log('скролл вниз');
+            //     } else {
+            //         console.log('скролл вверх');
+            //     }
+            // });
         });
-        fixSearch();
+        // fixSearch();
         function fixSearch() {
             if ($(window).scrollTop() >= searchTop) {
                 search.addClass('fixed');

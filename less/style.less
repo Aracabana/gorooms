@@ -38,20 +38,20 @@ body {
     }
     &-btn {
         margin-left: 10px;
-        font-weight: 700;
-        height: 30px;
-        font-size: 14px;
         &:first-child {
             margin-left: 0;
         }
     }
     .header-top-btn-signin,
     .header-top-btn-reg {
-        width: 138px;
+        width: 110px;
     }
     .header-top-btn-object {
-        width: 285px;
+        width: 235px;
     }
+}
+.header-logo {
+    display: block;
 }
 .header-menu-btn {
     display: none;
@@ -494,9 +494,15 @@ a {
     height: 40px;
     font-weight: 900;
     font-size: 16px;
+    line-height: 1;
     text-align: center;
     color: #ffffff;
     .user-select();
+    &-sm {
+        font-weight: 700;
+        height: 30px;
+        font-size: 14px;
+    }
     &-big {
         width: 100%;
         max-width: 360px;
