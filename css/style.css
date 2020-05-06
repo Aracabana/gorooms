@@ -2025,10 +2025,18 @@ select.form-control {
 .hotel-card-content:active {
   background-color: #f2f2f2;
 }
+.hotel-card-content:hover .hotel-card-title,
+.hotel-card-content:active .hotel-card-title {
+  color: #ff9d45;
+}
 .hotel-card-title {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 18px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 .hotel-card-address {
   margin-bottom: 20px;

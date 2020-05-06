@@ -1510,12 +1510,16 @@ select.form-control {
         padding: 10px;
         &:hover, &:active {
             background-color: @bg-color;
+            .hotel-card-title {
+                color: @accent-color;
+            }
         }
     }
     &-title {
         margin-bottom: 5px;
         font-weight: bold;
         font-size: 18px;
+        .transition();
     }
     &-address {
         margin-bottom: 20px;
