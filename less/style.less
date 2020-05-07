@@ -920,17 +920,25 @@ select.form-control {
     }
 }
 /*Search*/
+.search-wrapper {
+    margin-top: 4px;
+}
 .search {
     position: relative;
-    margin-top: 4px;
-    .transition();
+    backface-visibility: hidden;
+    .transition(transform linear 0.5s);
     &.fixed {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 100;
-        margin-top: 0;
+        opacity: 0;
+        .translate3D(0, -100%, 0);
+        &.bottom {
+            opacity: 1;
+            .translate3D(0, 0, 0);
+        }
         .search-form {
             .search-form-group {
                 overflow: hidden;
@@ -1112,6 +1120,10 @@ select.form-control {
     padding: 20px 0 30px;
     max-height: 1000px;
     background-color: #efefef;
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: fade(@text-color, 20%);
+    }
     .box-shadow(0, 0, 10px, 0, rgba(0, 0, 1, 0.3));
     .search-tags {
         border-bottom: none;

@@ -151,6 +151,13 @@
     -o-transform: translate(@x,@y);
     transform: translate(@x,@y);
 }
+.translate3D(@x, @y, @z) {
+    -webkit-transform: translate3d(@x,@y,@z);
+    -moz-transform: translate3d(@x,@y,@z);
+    -ms-transform: translate3d(@x,@y,@z);
+    -o-transform: translate3d(@x,@y,@z);
+    transform: translate3d(@x,@y,@z);
+}
 .skewX(@deg) {
     -webkit-transform: skewX(@deg);
     -moz-transform: skewX(@deg);

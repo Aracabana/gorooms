@@ -12,33 +12,40 @@ $(document).ready(function () {
     //scroll search
     if ($('*').is('#js-search')) {
         var search = $('#js-search');
+        var searchWrapper = $('#js-search-wrapper');
         var searchTop;
+        var searchHeight;
         $(window).resize(function () {
             searchTop = search.offset().top;
+            searchHeight = search.height();
         });
         $(window).trigger('resize');
         $(window).scroll(function () {
-            fixSearch();
-            // $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
-            //     var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-            //     if (delta < 0) {
-            //         console.log('скролл вниз');
-            //     } else {
-            //         console.log('скролл вверх');
-            //     }
-            // });
+            fixSearch(search);
         });
-        // fixSearch();
-        function fixSearch() {
-            if ($(window).scrollTop() >= searchTop) {
-                search.addClass('fixed');
-            } else {
-                search.removeClass('fixed');
-            }
-            var datepicker = $('.datepicker-here').datepicker().data('datepicker');
-            datepicker.update({
-                position: "bottom left"
-            })
+    }
+    // fixSearch();
+    function fixSearch(search) {
+        var datepicker = $('.datepicker-here').datepicker().data('datepicker');
+        datepicker.update({
+            position: "bottom left"
+        });
+        if ($(window).scrollTop() >= searchTop + searchHeight) {
+            searchWrapper.css('padding-top', searchHeight);
+            search.addClass('fixed');
+            $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
+                var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
+                if (delta < 0) {
+                    search.removeClass('bottom');
+                    datepicker.hide();
+                } else {
+                    search.addClass('bottom');
+                }
+            });
+        } else if ($(window).scrollTop() <= searchTop) {
+            searchWrapper.css('padding-top', 0);
+            search.removeClass('fixed');
+            search.removeClass('bottom');
         }
     }
     
