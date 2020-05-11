@@ -1116,9 +1116,6 @@ select.form-control {
   font-weight: 500;
   min-width: 61px;
 }
-.form-group-date-label span {
-  color: #fb1c1c;
-}
 /*datepicker*/
 .form-control-date {
   position: relative;

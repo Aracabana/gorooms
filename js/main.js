@@ -30,6 +30,8 @@ $(document).ready(function () {
         datepicker.update({
             position: "bottom left"
         });
+        datepicker.hide();
+        // var datepickers = $('.datepicker');
         if ($(window).scrollTop() >= searchTop + searchHeight) {
             searchWrapper.css('padding-top', searchHeight);
             search.addClass('fixed');
@@ -37,7 +39,9 @@ $(document).ready(function () {
                 var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
                 if (delta < 0) {
                     search.removeClass('bottom');
-                    datepicker.hide();
+                    // datepickers.each(function () {
+                    //     $(this).hide();
+                    // });
                 } else {
                     search.addClass('bottom');
                 }
