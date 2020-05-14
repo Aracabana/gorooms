@@ -78,6 +78,8 @@ body {
         img {
             vertical-align: text-bottom;
             margin-left: 5px;
+            width: 18px;
+            height: 19px;
         }
         &:hover, &:active, &:focus {
             font-weight: 400;
@@ -384,8 +386,8 @@ h4 {
     margin-top: -12.5px;
     width: 14px;
     height: 25px;
-    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
+    background-size: 100%;
     cursor: pointer;
     pointer-events: all;
     &::after {
@@ -432,15 +434,14 @@ h4 {
         width: 14px;
         height: 25px;
         background-color: transparent;
-        background-image: url("../img/sprite.png");
-        background-position: -19px -117px;
+        background-image: url("../img/ico-arrow-right.svg");
         background-repeat: no-repeat;
-        background-size: auto auto;
+        background-size: 100%;
     }
     &:hover, &:active {
         outline: none;
         &::after {
-            background-position: -55px -117px;
+            background-image: url("../img/ico-arrow-right-blue.svg");
         }
     }
 }
@@ -761,9 +762,10 @@ select.form-control {
     padding-right: 35px;
     width: 135px;
     height: 30px;
-    background-image: url("../img/ico-calendar.png");
+    background-image: url("../img/ico-calendar.svg");
     background-repeat: no-repeat;
     background-position: right 7px center;
+    background-size: 20px 20px;
     &:focus {
         font-weight: bold;
     }
@@ -1254,7 +1256,6 @@ select.form-control {
             top: 50%;
             left: 34px;
             background-repeat: no-repeat;
-            background-image: url("../img/sprite.png");
         }
         &-profitably {
             border-bottom: 1px solid transparent;
@@ -1266,9 +1267,10 @@ select.form-control {
             padding-left: 60px;
             &::after {
                 margin-top: -12px;
-                width: 15px;
-                height: 21px;
-                background-position: -48px 0;
+                width: 16px;
+                height: 22px;
+                background-size: 100%;
+                background-image: url("../img/ico-fire-white.svg");
             }
         }
         &-cashback {
@@ -1278,6 +1280,7 @@ select.form-control {
                 width: 26px;
                 height: 26px;
                 background-position: 0 -82px;
+                background-image: url("../img/sprite.png");
             }
         }
     }
@@ -1501,15 +1504,15 @@ select.form-control {
         max-height: 190px;
         .swiper-button {
             &-prev {
-                background-position: -35px -117px;
+                background-image: url("../img/ico-arrow-left-blue.svg");
                 &:hover, &:active {
-                    background-position: 0 -117px;
+                    background-image: url("../img/ico-arrow-left.svg");
                 }
             }
             &-next {
-                background-position: -55px -117px;
+                background-image: url("../img/ico-arrow-right-blue.svg");
                 &:hover, &:active {
-                    background-position: -19px -117px;
+                    background-image: url("../img/ico-arrow-right.svg");
                 }
             }
         }
@@ -1650,15 +1653,15 @@ select.form-control {
         max-height: 340px;
         .swiper-button {
             &-prev {
-                background-position: 0 -117px;
+                background-image: url("../img/ico-arrow-left.svg");
                 &:hover, &:active {
-                    background-position: -35px -117px;
+                    background-image: url("../img/ico-arrow-left-blue.svg");
                 }
             }
             &-next {
-                background-position: -19px -117px;
+                background-image: url("../img/ico-arrow-right.svg");
                 &:hover, &:active {
-                    background-position: -55px -117px;
+                    background-image: url("../img/ico-arrow-right-blue.svg");
                 }
             }
         }
@@ -1807,11 +1810,11 @@ select.form-control {
         position: absolute;
         top: 50%;
         margin-top: -10px;
-        width: 15px;
-        height: 20px;
-        background-image: url("../img/sprite.png");
+        width: 16px;
+        height: 22px;
+        background-image: url("../img/ico-fire-white.svg");
         background-repeat: no-repeat;
-        background-position: -48px 0;
+        background-size: 100%;
     }
     &::before {
         left: 10px;
@@ -2192,16 +2195,16 @@ select.form-control {
     }
     .swiper-button-prev {
         left: 0;
-        background-position: 0 -147px;
+        background-image: url("../img/ico-arrow-left-blue.svg");
         &:hover, &:active {
-            background-position: -14px -147px;
+            background-image: url("../img/ico-arrow-left.svg");
         }
     }
     .swiper-button-next {
         right: 0;
-        background-position: -32px -147px;
+        background-image: url("../img/ico-arrow-right-blue.svg");
         &:hover, &:active {
-            background-position: -46px -147px;
+            background-image: url("../img/ico-arrow-right.svg");
         }
     }
 }
@@ -2399,7 +2402,7 @@ select.form-control {
             position: absolute;
             left: 0;
             top: 1px;
-            background-image: url("../img/sprite.png");
+            background-size: 100%;
             background-repeat: no-repeat;
         }
         &-tel {
@@ -2409,14 +2412,14 @@ select.form-control {
                 top: 2px;
                 width: 26px;
                 height: 26px;
-                background-position: -146px 0;
+                background-image: url("../img/ico-tel-blue.svg");
             }
         }
         &-email {
             &::before {
                 width: 27px;
-                height: 21px;
-                background-position: -88px 0;
+                height: 20px;
+                background-image: url("../img/ico-mail-blue.svg");
             }
         }
         &-address {
@@ -2425,7 +2428,7 @@ select.form-control {
                 left: 4px;
                 width: 21px;
                 height: 24px;
-                background-position: -120px 0;
+                background-image: url("../img/ico-address-blue.svg");
             }
         }
     }
@@ -2657,24 +2660,24 @@ select.form-control {
                 position: absolute;
                 left: 0;
                 bottom: 4px;
-                background-image: url("../img/sprite.png");
                 background-repeat: no-repeat;
+                background-size: 100%;
             }
             &-tel {
                 font-weight: 500;
                 font-size: 18px;
                 &::before {
                     bottom: -1px;
-                    width: 25px;
+                    width: 26px;
                     height: 26px;
-                    background-position: -25px -25px;
+                    background-image: url("../img/ico-tel.svg");
                 }
             }
             &-email {
                 &::before {
                     width: 27px;
-                    height: 21px;
-                    background-position: -56px -27px;
+                    height: 20px;
+                    background-image: url("../img/ico-mail.svg");
                 }
             }
             &-address {
@@ -2682,7 +2685,7 @@ select.form-control {
                 &::before {
                     width: 21px;
                     height: 24px;
-                    background-position: 0 -25px;
+                    background-image: url("../img/ico-address.svg");
                 }
             }
         }
@@ -2718,15 +2721,15 @@ button.modal-close {
     width: 16px;
     height: 16px;
     background-color: transparent;
-    background-image: url("../img/sprite.png");
+    background-image: url("../img/ico-close-orange.svg");
     background-repeat: no-repeat;
-    background-position: -67px 0;
+    background-size: 100%;
     opacity: 1;
     cursor: pointer;
     .transition(none);
     &:hover, &:active, &:focus {
         opacity: 1;
-        background-position: 0 -56px;
+        background-image: url("../img/ico-close-blue.svg");
     }
 }
 .modal-title {

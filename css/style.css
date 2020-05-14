@@ -324,6 +324,8 @@ body {
 .header-menu-link img {
   vertical-align: text-bottom;
   margin-left: 5px;
+  width: 18px;
+  height: 19px;
 }
 .header-menu-link:hover,
 .header-menu-link:active,
@@ -665,8 +667,8 @@ h4 {
   margin-top: -12.5px;
   width: 14px;
   height: 25px;
-  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
+  background-size: 100%;
   cursor: pointer;
   pointer-events: all;
 }
@@ -718,10 +720,9 @@ h4 {
   width: 14px;
   height: 25px;
   background-color: transparent;
-  background-image: url("../img/sprite.png");
-  background-position: -19px -117px;
+  background-image: url("../img/ico-arrow-right.svg");
   background-repeat: no-repeat;
-  background-size: auto auto;
+  background-size: 100%;
 }
 .fancybox-arrow:hover,
 .fancybox-arrow:active {
@@ -729,7 +730,7 @@ h4 {
 }
 .fancybox-arrow:hover::after,
 .fancybox-arrow:active::after {
-  background-position: -55px -117px;
+  background-image: url("../img/ico-arrow-right-blue.svg");
 }
 .fancybox-arrow--left {
   left: 5px;
@@ -1129,9 +1130,10 @@ select.form-control {
   padding-right: 35px;
   width: 135px;
   height: 30px;
-  background-image: url("../img/ico-calendar.png");
+  background-image: url("../img/ico-calendar.svg");
   background-repeat: no-repeat;
   background-position: right 7px center;
+  background-size: 20px 20px;
 }
 .form-control-date:focus {
   font-weight: bold;
@@ -1778,7 +1780,6 @@ select.form-control {
   top: 50%;
   left: 34px;
   background-repeat: no-repeat;
-  background-image: url("../img/sprite.png");
 }
 .advanced-search .search-filter-label-profitably {
   border-bottom: 1px solid transparent;
@@ -1791,9 +1792,10 @@ select.form-control {
 }
 .advanced-search .search-filter-label-fire::after {
   margin-top: -12px;
-  width: 15px;
-  height: 21px;
-  background-position: -48px 0;
+  width: 16px;
+  height: 22px;
+  background-size: 100%;
+  background-image: url("../img/ico-fire-white.svg");
 }
 .advanced-search .search-filter-label-cashback {
   padding-left: 75px;
@@ -1803,6 +1805,7 @@ select.form-control {
   width: 26px;
   height: 26px;
   background-position: 0 -82px;
+  background-image: url("../img/sprite.png");
 }
 .advanced-search .checkbox-profitably:checked + .search-filter-label-profitably {
   border-bottom-color: #ffffff;
@@ -2021,18 +2024,18 @@ select.form-control {
   max-height: 190px;
 }
 .hotel-card-slider .swiper-button-prev {
-  background-position: -35px -117px;
+  background-image: url("../img/ico-arrow-left-blue.svg");
 }
 .hotel-card-slider .swiper-button-prev:hover,
 .hotel-card-slider .swiper-button-prev:active {
-  background-position: 0 -117px;
+  background-image: url("../img/ico-arrow-left.svg");
 }
 .hotel-card-slider .swiper-button-next {
-  background-position: -55px -117px;
+  background-image: url("../img/ico-arrow-right-blue.svg");
 }
 .hotel-card-slider .swiper-button-next:hover,
 .hotel-card-slider .swiper-button-next:active {
-  background-position: -19px -117px;
+  background-image: url("../img/ico-arrow-right.svg");
 }
 .hotel-card-slider img {
   display: block;
@@ -2213,18 +2216,18 @@ select.form-control {
   max-height: 340px;
 }
 .room-card-slider .swiper-button-prev {
-  background-position: 0 -117px;
+  background-image: url("../img/ico-arrow-left.svg");
 }
 .room-card-slider .swiper-button-prev:hover,
 .room-card-slider .swiper-button-prev:active {
-  background-position: -35px -117px;
+  background-image: url("../img/ico-arrow-left-blue.svg");
 }
 .room-card-slider .swiper-button-next {
-  background-position: -19px -117px;
+  background-image: url("../img/ico-arrow-right.svg");
 }
 .room-card-slider .swiper-button-next:hover,
 .room-card-slider .swiper-button-next:active {
-  background-position: -55px -117px;
+  background-image: url("../img/ico-arrow-right-blue.svg");
 }
 .room-card-slider img {
   display: block;
@@ -2423,11 +2426,11 @@ select.form-control {
   position: absolute;
   top: 50%;
   margin-top: -10px;
-  width: 15px;
-  height: 20px;
-  background-image: url("../img/sprite.png");
+  width: 16px;
+  height: 22px;
+  background-image: url("../img/ico-fire-white.svg");
   background-repeat: no-repeat;
-  background-position: -48px 0;
+  background-size: 100%;
 }
 .btn-fire::before {
   left: 10px;
@@ -2963,19 +2966,19 @@ select.form-control {
 }
 .product-slider-small-wrapper .swiper-button-prev {
   left: 0;
-  background-position: 0 -147px;
+  background-image: url("../img/ico-arrow-left-blue.svg");
 }
 .product-slider-small-wrapper .swiper-button-prev:hover,
 .product-slider-small-wrapper .swiper-button-prev:active {
-  background-position: -14px -147px;
+  background-image: url("../img/ico-arrow-left.svg");
 }
 .product-slider-small-wrapper .swiper-button-next {
   right: 0;
-  background-position: -32px -147px;
+  background-image: url("../img/ico-arrow-right-blue.svg");
 }
 .product-slider-small-wrapper .swiper-button-next:hover,
 .product-slider-small-wrapper .swiper-button-next:active {
-  background-position: -46px -147px;
+  background-image: url("../img/ico-arrow-right.svg");
 }
 .product-slide-small {
   overflow: hidden;
@@ -3219,7 +3222,7 @@ select.form-control {
   position: absolute;
   left: 0;
   top: 1px;
-  background-image: url("../img/sprite.png");
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 .contacts-list-item-tel {
@@ -3230,12 +3233,12 @@ select.form-control {
   top: 2px;
   width: 26px;
   height: 26px;
-  background-position: -146px 0;
+  background-image: url("../img/ico-tel-blue.svg");
 }
 .contacts-list-item-email::before {
   width: 27px;
-  height: 21px;
-  background-position: -88px 0;
+  height: 20px;
+  background-image: url("../img/ico-mail-blue.svg");
 }
 .contacts-list-item-address {
   margin-bottom: 0;
@@ -3244,7 +3247,7 @@ select.form-control {
   left: 4px;
   width: 21px;
   height: 24px;
-  background-position: -120px 0;
+  background-image: url("../img/ico-address-blue.svg");
 }
 .contacts-map-wrapper {
   height: 375px;
@@ -3576,8 +3579,8 @@ select.form-control {
   position: absolute;
   left: 0;
   bottom: 4px;
-  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .footer-contacts-item-tel {
   font-weight: 500;
@@ -3585,14 +3588,14 @@ select.form-control {
 }
 .footer-contacts-item-tel::before {
   bottom: -1px;
-  width: 25px;
+  width: 26px;
   height: 26px;
-  background-position: -25px -25px;
+  background-image: url("../img/ico-tel.svg");
 }
 .footer-contacts-item-email::before {
   width: 27px;
-  height: 21px;
-  background-position: -56px -27px;
+  height: 20px;
+  background-image: url("../img/ico-mail.svg");
 }
 .footer-contacts-item-address {
   padding-left: 32px;
@@ -3600,7 +3603,7 @@ select.form-control {
 .footer-contacts-item-address::before {
   width: 21px;
   height: 24px;
-  background-position: 0 -25px;
+  background-image: url("../img/ico-address.svg");
 }
 /*=MODALS=*/
 .modal-backdrop {
@@ -3638,9 +3641,9 @@ button.modal-close {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  background-image: url("../img/sprite.png");
+  background-image: url("../img/ico-close-orange.svg");
   background-repeat: no-repeat;
-  background-position: -67px 0;
+  background-size: 100%;
   opacity: 1;
   cursor: pointer;
   -webkit-transition: none;
@@ -3652,7 +3655,7 @@ button.modal-close:hover,
 button.modal-close:active,
 button.modal-close:focus {
   opacity: 1;
-  background-position: 0 -56px;
+  background-image: url("../img/ico-close-blue.svg");
 }
 .modal-title {
   margin-bottom: 25px;
