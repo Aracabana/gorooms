@@ -71,7 +71,9 @@ $(document).ready(function () {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 loop: true,
-                speed: 400
+                speed: 400,
+                roundLengths: true,
+                effect: 'fade'
             });
         });
     }
@@ -80,6 +82,7 @@ $(document).ready(function () {
             spaceBetween: 10,
             slidesPerView: 2,
             loop: true,
+            roundLengths: true,
             navigation: {
                 nextEl: '.swiper-button.swiper-button-next.product-slider-small-button-next',
                 prevEl: '.swiper-button.swiper-button-prev.product-slider-small-button-prev'
@@ -97,6 +100,7 @@ $(document).ready(function () {
         });
         var galleryTop = new Swiper('.product-slider-big', {
             loop: true,
+            roundLengths: true,
             thumbs: {
                 swiper: galleryThumbs,
             },

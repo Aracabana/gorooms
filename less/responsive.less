@@ -20,6 +20,19 @@
         display: block;
     }
 }
+@media (max-width: 1454px) {
+    .room-card-horizontal {
+        .room-card-slider {
+            width: 50%;
+        }
+        .stock {
+            right: 50%;
+        }
+        .room-card-in {
+            width: 50%;
+        }
+    }
+}
 @media (max-width: 1219px) {
     /*=HOME=*/
     /*Search*/
@@ -105,7 +118,10 @@
 @media (max-width: 991px) {
     /*=HEADER=*/
     .header-top {
-        padding-bottom: 10px;
+        padding-bottom: 0;
+        &-btns {
+            display: none;
+        }
     }
     .header-logo {
         &-img {
@@ -154,7 +170,6 @@
     }
     .header-menu-wrapper {
         position: relative;
-        padding: 10px 0;
     }
     .header-menu-container {
         .flex();
@@ -168,7 +183,7 @@
         left: 0;
         top: 100%;
         right: 0;
-        z-index: 100;
+        z-index: 105;
         display: none;
         margin-left: 0;
         padding: 10px 0;
@@ -181,6 +196,17 @@
             margin: 0 auto;
             padding: 0 15px;
             max-width: 720px;
+            &-mobile {
+                display: block;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .btn-sm {
+                    width: 100%;
+                    height: 34px;
+                }
+            }
         }
     }
     /*=LINKS&FORMS=*/
@@ -429,19 +455,7 @@
 }
 @media (max-width: 767px) {
     /*=HEADER=*/
-    .header-top {
-        &-container {
-            display: block;
-            text-align: center;
-        }
-        &-btns {
-            .space-between();
-            max-width: none;
-        }
-    }
     .header-logo {
-        display: inline-block;
-        margin-bottom: 10px;
         &-img {
             width: 170px;
         }
@@ -480,6 +494,7 @@
         padding: 10px;
     }
     .search-tags {
+        display: none;
         padding: 5px 0;
     }
     .search-tag {
@@ -512,41 +527,16 @@
                 width: 100%;
             }
         }
+        .search-tags {
+            display: block;
+            padding: 5px 0;
+        }
         .search-filter-label + .hotel-rating {
             margin-top: 0;
             margin-left: 5px;
         }
     }
     /*Fire*/
-    .stock {
-        height: 65px;
-        &-percents {
-            width: 60px;
-            &-in {
-                font-size: 18px;
-            }
-        }
-        &-timer {
-            padding: 5px;
-            width: 130px;
-            &-title {
-                margin-bottom: 4px;
-                font-size: 10px;
-            }
-            &-in {
-                &-item {
-                    width: 32%;
-                    height: 41px;
-                    span {
-                        font-size: 10px;
-                        &:first-child {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
-        }
-    }
     .btn-fire {
         position: relative;
         top: 0;
@@ -678,6 +668,33 @@
             max-height: none;
         }
     }
+    /*Fire*/
+    .room-card {
+        &-prices {
+            &-item {
+                padding: 10px;
+                &-title {
+                    font-size: 12px;
+                }
+                &-price {
+                    font-size: 16px;
+                    &-old {
+                        font-size: 12px;
+                        &::before {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    &-new {
+                        font-size: 16px;
+                    }
+                }
+                &-time {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
     /*Blog*/
     .blog {
         padding-bottom: 40px;
@@ -789,23 +806,6 @@
     }
 }
 @media (max-width: 440px) {
-    /*=HEADER=*/
-    .header-top {
-        &-btns {
-            .flex-wrap();
-        }
-        &-btn {
-            margin-left: 0;
-        }
-        .header-top-btn-signin,
-        .header-top-btn-reg {
-            width: 48%;
-        }
-        .header-top-btn-object {
-            margin-bottom: 8px;
-            width: 100%;
-        }
-    }
     /*=HOME=*/
     /*Search*/
     .advanced-search {
@@ -824,17 +824,6 @@
         }
         &-metro {
             column-count: 1;
-        }
-        &-prices {
-            display: block;
-            &-item {
-                display: block;
-                width: 100%;
-                + .room-card-prices-item {
-                    border-left: none;
-                    border-top: 1px solid #ffffff;
-                }
-            }
         }
         &-btns {
             display: block;
@@ -961,6 +950,33 @@
             }
         }
     }
+    /*Fire*/
+    .room-card {
+        &-prices {
+            &-item {
+                padding: 5px;
+                &-title {
+                    font-size: 10px;
+                }
+                &-price {
+                    font-size: 14px;
+                    &-old {
+                        font-size: 10px;
+                        &::before {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    &-new {
+                        font-size: 14px;
+                    }
+                }
+                &-time {
+                    font-size: 9px;
+                }
+            }
+        }
+    }
     /*=HOTEL-PAGE=*/
     .stars label {
         width: 20px;
@@ -990,21 +1006,21 @@
 }
 @media (max-height: 880px) {
     .advanced-search {
-        max-height: 700px;
+        max-height: 670px;
     }
 }
 @media (max-height: 715px) {
     .advanced-search {
-        max-height: 550px;
+        max-height: 520px;
     }
 }
 @media (max-height: 600px) {
     .advanced-search {
-        max-height: 450px;
+        max-height: 420px;
     }
 }
 @media (max-height: 460px) {
     .advanced-search {
-        max-height: 300px;
+        max-height: 270px;
     }
 }

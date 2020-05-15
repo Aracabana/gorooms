@@ -64,6 +64,9 @@ body {
     .align-items-center();
     .space-between();
     &-item {
+        &-mobile {
+            display: none;
+        }
         &.active {
             .header-menu-link {
                 color: @accent-color-2;
@@ -383,21 +386,22 @@ h4 {
     display: block;
     .box-sizing();
     top: 50%;
-    margin-top: -12.5px;
-    width: 14px;
-    height: 25px;
+    margin-top: -27.5px;
+    width: 34px;
+    height: 55px;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 14px 25px;
+    background-position: center;
     cursor: pointer;
     pointer-events: all;
     &::after {
         display: none;
     }
     &-prev {
-        left: 13px;
+        left: 3px;
     }
     &-next {
-        right: 13px;
+        right: 3px;
     }
     &:hover, &:active, &:focus {
         outline: none;
@@ -1034,7 +1038,7 @@ select.form-control {
     .flex-start();
     .flex-wrap();
     border-bottom: 1px solid #ffffff;
-    padding: 15px 0;
+    padding: 8px 0;
     .transition();
 }
 .search-tag {
@@ -1125,7 +1129,7 @@ select.form-control {
     .box-shadow(0, 0, 10px, 0, rgba(0, 0, 1, 0.3));
     .search-tags {
         border-bottom: none;
-        padding: 10px 0;
+        padding: 8px 0;
     }
     .search-tag {
         color: @accent-color-2;
@@ -1579,11 +1583,11 @@ select.form-control {
     z-index: 10;
     .flex();
     .space-between();
-    height: 78px;
+    height: 60px;
     &-percents {
         .box-sizing();
         padding: 5px;
-        width: 78px;
+        width: 60px;
         background-color: @accent-color-3-middle;
         &-in {
             .flex();
@@ -1591,7 +1595,7 @@ select.form-control {
             .flex-center();
             height: 100%;
             font-weight: 900;
-            font-size: 26px;
+            font-size: 20px;
             line-height: 1;
             color: #ffffff;
             border: 2px solid #ffffff;
@@ -1599,13 +1603,13 @@ select.form-control {
     }
     &-timer {
         .box-sizing();
-        padding: 7px 5px 5px;
-        width: 162px;
+        padding: 5px;
+        width: 130px;
         background-color: @accent-color-3;
         &-title {
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             font-weight: bold;
-            font-size: 12px;
+            font-size: 8px;
             line-height: 1;
             white-space: nowrap;
             color: #ffffff;
@@ -1621,16 +1625,17 @@ select.form-control {
                 .box-sizing();
                 border: 2px solid #ffffff;
                 width: 32%;
-                height: 48px;
+                height: 37px;
                 span {
                     display: block;
-                    font-size: 12px;
+                    font-size: 10px;
+                    line-height: 1;
                     text-align: center;
                     color: #ffffff;
                     &:first-child {
                         font-weight: 900;
-                        font-size: 23px;
-                        line-height: 1;
+                        font-size: 16px;
+                        line-height: 0.9;
                     }
                 }
             }
@@ -1673,9 +1678,12 @@ select.form-control {
     }
     &-content {
         display: block;
+        .box-sizing();
         margin-bottom: 1px;
         border: 2px solid @bg-color;
         padding: 10px 15px 0;
+        height: -webkit-calc(100% - 156px);
+        height: calc(100% - 156px);
         .transition();
     }
     &-header {
@@ -1768,6 +1776,7 @@ select.form-control {
                         height: 22px;
                         background-image: url("../img/ico-cross.png");
                         background-repeat: no-repeat;
+                        background-size: 100%;
                     }
                 }
                 &-new {
@@ -1793,13 +1802,13 @@ select.form-control {
     .flex();
     .space-between();
     .room-card-slider {
-        width: 50%;
+        width: 41%;
     }
     .stock {
-        right: 50%;
+        right: 59%;
     }
     .room-card-in {
-        width: 50%;
+        width: 59%;
     }
 }
 .btn-fire {
@@ -2189,19 +2198,20 @@ select.form-control {
     padding: 0 30px;
     .swiper-button {
         top: 50%;
-        margin-top: -10px;
-        width: 11px;
-        height: 20px;
+        margin-top: -25px;
+        width: 31px;
+        height: 50px;
+        background-size: 11px 20px;
     }
     .swiper-button-prev {
-        left: 0;
+        left: -10px;
         background-image: url("../img/ico-arrow-left-blue.svg");
         &:hover, &:active {
             background-image: url("../img/ico-arrow-left.svg");
         }
     }
     .swiper-button-next {
-        right: 0;
+        right: -10px;
         background-image: url("../img/ico-arrow-right-blue.svg");
         &:hover, &:active {
             background-image: url("../img/ico-arrow-right.svg");
