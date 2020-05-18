@@ -359,10 +359,11 @@ h4 {
             top: 50%;
             margin-top: -7px;
             width: 26px;
-            height: 15px;
-            background-image: url("../img/sprite.png");
+            height: 14px;
+            background-image: url("../img/ico-arrow-down-blue-lg.svg");
             background-repeat: no-repeat;
-            background-position: -101px -117px;
+            background-size: 100%;
+            background-position: center;
         }
         &:hover, &:active {
             text-decoration: underline;
@@ -871,15 +872,16 @@ select.form-control {
     width: 15px;
     height: 9px;
     background-repeat: no-repeat;
-    background-image: url("../img/sprite.png");
-    background-position: -88px -55px;
+    background-image: url("../img/ico-arrow-down-orange.svg");
+    background-position: center;
+    background-size: 100%;
     .transition();
 }
 .form-control.jq-selectbox.opened .jq-selectbox__select-text {
     font-weight: bold;
 }
 .form-control.jq-selectbox.opened .jq-selectbox__trigger-arrow {
-    .rotate(180deg);
+    .rotate(-180deg);
 }
 .form-control .jq-selectbox__dropdown {
     overflow: hidden;
@@ -1088,12 +1090,12 @@ select.form-control {
         position: absolute;
         right: 0;
         top: 50%;
-        margin-top: -5px;
+        margin-top: -4px;
         width: 18px;
         height: 10px;
-        background-image: url("../img/sprite.png");
+        background-image: url("../img/ico-arrow-down-orange.svg");
         background-repeat: no-repeat;
-        background-position: -66px -56px;
+        background-size: 100%;
     }
     &-open {
         .order(1);
@@ -1103,7 +1105,6 @@ select.form-control {
         .order(1);
         color: @accent-color;
         &::after {
-            margin-top: -4px;
             .rotate(180deg);
         }
     }
@@ -1151,7 +1152,7 @@ select.form-control {
         .form-control .jq-selectbox__trigger-arrow {
             width: 12px;
             height: 8px;
-            background-position: -90px -65px;
+            background-image: url("../img/ico-arrow-down-blue-sm.svg");
         }
     }
     &-prices {
@@ -1332,17 +1333,18 @@ select.form-control {
         width: 30px;
         height: 30px;
         background-repeat: no-repeat;
-        background-image: url("../img/sprite.png");
         .transition(none);
         &-favorite {
             margin-right: 30px;
-            background-position: -61.5px -83px;
+            background-image: url("../img/ico-favorites.svg");
+            background-size: 25px 27px;
             &:hover, &:active {
-                background-position: -159px -157px;
+                background-image: url("../img/ico-favorites-hover.svg");
             }
         }
         &-map {
             margin-right: 20px;
+            background-image: url("../img/sprite.png");
             background-position: -94px -82px;
             &:hover, &:active {
                 background-position: -127px -82px;
@@ -1682,8 +1684,8 @@ select.form-control {
         margin-bottom: 1px;
         border: 2px solid @bg-color;
         padding: 10px 15px 0;
-        height: -webkit-calc(100% - 156px);
-        height: calc(100% - 156px);
+        height: -webkit-calc(100% - 153px);
+        height: calc(100% - 153px);
         .transition();
     }
     &-header {
@@ -2101,9 +2103,10 @@ select.form-control {
         .align-items-center();
         width: 200px;
         background-color: @bg-color-light;
-        background-image: url("../img/bg-review.png");
+        background-image: url("../img/bg-review.svg");
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: 111px 78px;
         img {
             display: block;
             max-width: 100%;
@@ -2261,17 +2264,9 @@ select.form-control {
     padding-left: 45px;
     max-width: 365px;
     font-size: 18px;
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 5px;
-        width: 24px;
-        height: 34px;
-        background-image: url("../img/sprite.png");
-        background-repeat: no-repeat;
-        background-position: -151px -53px;
-    }
+    background-image: url("../img/ico-address-pin.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 34px;
 }
 .room-metro {
     margin-bottom: 30px;
@@ -2481,19 +2476,20 @@ select.form-control {
         margin-right: 8px;
         width: 27px;
         height: 15px;
-        background-image: url("../img/sprite.png");
+        background-position: center;
+        background-size: 100%;
         background-repeat: no-repeat;
         .transition(none);
         &:first-child {
-            background-position: -101px -117px;
+            background-image: url("../img/ico-arrow-down-blue-lg.svg");
             &:hover, &.active {
-                background-position: -102px -135px;
+                background-image: url("../img/ico-arrow-down-orange.svg");
             }
         }
         &:nth-child(2) {
-            background-position: -131px -117px;
+            background-image: url("../img/ico-arrow-top-blue-lg.svg");
             &:hover, &.active {
-                background-position: -132px -135px;
+                background-image: url("../img/ico-arrow-top-orange.svg");
             }
         }
         + .search-filter-label {
