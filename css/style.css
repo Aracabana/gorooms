@@ -1074,12 +1074,13 @@ select.form-control {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 14px;
 }
 .checkbox-label-dark::before {
   border: 2px solid #f2f2f2;
   width: 22px;
   height: 22px;
-  background-position: -130px -52px;
 }
 .checkbox-label-light {
   padding-left: 25px;
@@ -1088,7 +1089,6 @@ select.form-control {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
-  background-position: -20px -54px;
 }
 .checkbox-label-orange {
   padding-left: 25px;
@@ -1097,10 +1097,15 @@ select.form-control {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
-  background-position: -42px -54px;
 }
-.checkbox:checked + .checkbox-label::before {
-  background-image: url("../img/sprite.png");
+.checkbox:checked + .checkbox-label-orange::before {
+  background-image: url("../img/ico-check-orange.svg");
+}
+.checkbox:checked + .checkbox-label-light::before {
+  background-image: url("../img/ico-check-blue.svg");
+}
+.checkbox:checked + .checkbox-label-dark::before {
+  background-image: url("../img/ico-check-dark-blue.svg");
 }
 .checkbox:disabled + .checkbox-label {
   cursor: text;
@@ -3124,8 +3129,8 @@ select.form-control {
   width: 18px;
   height: 16px;
   background-repeat: no-repeat;
-  background-image: url("../img/sprite.png");
-  background-position: -129px -53px;
+  background-image: url("../img/ico-check-dark-blue.svg");
+  background-size: 18px 16px;
 }
 /*=MAP=*/
 .map-search-wrapper {

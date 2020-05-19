@@ -712,13 +712,14 @@ select.form-control {
         top: 0;
         .box-sizing();
         background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px 14px;
     }
     &-dark {
         &::before {
             border: 2px solid @bg-color;
             width: 22px;
             height: 22px;
-            background-position: -130px -52px;
         }
     }
     &-light {
@@ -727,7 +728,6 @@ select.form-control {
             width: 20px;
             height: 20px;
             background-color: #ffffff;
-            background-position: -20px -54px;
         }
     }
     &-orange {
@@ -736,12 +736,17 @@ select.form-control {
             width: 20px;
             height: 20px;
             background-color: #ffffff;
-            background-position: -42px -54px;
         }
     }
 }
-.checkbox:checked + .checkbox-label::before {
-    background-image: url("../img/sprite.png");
+.checkbox:checked + .checkbox-label-orange::before {
+    background-image: url("../img/ico-check-orange.svg");
+}
+.checkbox:checked + .checkbox-label-light::before {
+    background-image: url("../img/ico-check-blue.svg");
+}
+.checkbox:checked + .checkbox-label-dark::before {
+    background-image: url("../img/ico-check-dark-blue.svg");
 }
 .checkbox:disabled + .checkbox-label {
     cursor: text;
@@ -2328,8 +2333,8 @@ select.form-control {
             width: 18px;
             height: 16px;
             background-repeat: no-repeat;
-            background-image: url("../img/sprite.png");
-            background-position: -129px -53px;
+            background-image: url("../img/ico-check-dark-blue.svg");
+            background-size: 18px 16px;
         }
     }
 }
