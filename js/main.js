@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var windowW;
-    var advancedSearchIsOpen = false;
+    // var searchBoxOnTop = false;
     $(window).resize(function () {
         windowW = $(window).width();
         if (windowW >= 992) {
@@ -46,28 +46,20 @@ $(document).ready(function () {
             searchWrapper.css('padding-top', searchHeight);
             search.addClass('fixed');
             if (windowW <= 991) {
-                mobileAdvancedSearchBtn.show();
+                search.addClass('show-advanced-btn');
             }
             $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
                 var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
                 if (delta < 0) {
-                    if (!advancedSearchIsOpen) {
-                        search.removeClass('bottom');
-                        advancedSearch.removeClass('fixed');
-                    }
+                    search.removeClass('bottom');
                 } else {
-                    if (!advancedSearchIsOpen) {
-                        search.addClass('bottom');
-                        advancedSearch.addClass('fixed');
-                    }
+                    search.addClass('bottom');
                 }
             });
         } else if ($(window).scrollTop() <= searchTop) {
             searchWrapper.css('padding-top', 0);
             search.removeClass('fixed');
             search.removeClass('bottom');
-            advancedSearch.removeClass('fixed');
-            mobileAdvancedSearchBtn.hide();
         }
     }
     
@@ -75,17 +67,24 @@ $(document).ready(function () {
     $('#js-advanced-search-open-btn').on('click', function (e) {
         e.stopPropagation();
         e.preventDefault();
-        advancedSearchIsOpen = true;
-        $(this).closest('#js-search-wrapper').find('#js-advanced-search').slideDown();
-        $(this).closest('#js-search-wrapper').find('#js-advanced-search-in').scrollTop(0);
+        var isSearchOnTop = $('#js-search').hasClass('bottom') || $('#js-search').hasClass('show-advanced-btn');
+        if(isSearchOnTop) {
+            $('#js-advanced-search').addClass('fixed');
+        } else {
+            $('#js-advanced-search').removeClass('fixed');
+        }
+
+        $('#js-advanced-search').slideDown();
+        $('#js-advanced-search-in').scrollTop(0);
+
         $('body').addClass('noscroll');
     });
-    $('#js-mobile-advanced-search-open-btn').on('click', function (e) {
-        advancedSearchIsOpen = true;
-        $(this).closest('#js-search-wrapper').find('#js-advanced-search').addClass('fixed').slideDown();
-        $(this).closest('#js-search-wrapper').find('#js-advanced-search-in').scrollTop(0);
-        $('body').addClass('noscroll');
-    });
+    // $('#js-mobile-advanced-search-open-btn').on('click', function (e) {
+    //     advancedSearchIsOpen = true;
+    //     $(this).closest('#js-search-wrapper').find('#js-advanced-search').addClass('fixed').slideDown();
+    //     $(this).closest('#js-search-wrapper').find('#js-advanced-search-in').scrollTop(0);
+    //     $('body').addClass('noscroll');
+    // });
     $('#js-advanced-search-close-btn').on('click', function (e) {
         e.stopPropagation();
         e.preventDefault();
