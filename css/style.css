@@ -4144,6 +4144,9 @@ button.modal-close:focus {
   .search-bottom {
     display: block;
   }
+  .advanced-search {
+    top: 65px;
+  }
   .advanced-search.fixed {
     position: fixed;
   }
@@ -4420,6 +4423,9 @@ button.modal-close:focus {
   }
   .search-dates .form-group-date:last-child {
     margin-bottom: 0;
+  }
+  .advanced-search {
+    top: 60px;
   }
   .advanced-search-prices {
     padding-bottom: 0;

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var windowW;
-    // var searchBoxOnTop = false;
+    var searchBoxOnTop = false;
     $(window).resize(function () {
         windowW = $(window).width();
         if (windowW >= 992) {
@@ -48,18 +48,24 @@ $(document).ready(function () {
             if (windowW <= 991) {
                 search.addClass('show-advanced-btn');
             }
+            searchBoxOnTop = false;
             $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
                 var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
                 if (delta < 0) {
                     search.removeClass('bottom');
                 } else {
-                    search.addClass('bottom');
+                    if(!searchBoxOnTop) {
+                        search.addClass('bottom');
+                    }
+
                 }
             });
         } else if ($(window).scrollTop() <= searchTop) {
             searchWrapper.css('padding-top', 0);
             search.removeClass('fixed');
             search.removeClass('bottom');
+            search.removeClass('show-advanced-btn');
+            searchBoxOnTop = true;
         }
     }
     
