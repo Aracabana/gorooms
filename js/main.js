@@ -1,10 +1,20 @@
 $(document).ready(function () {
     var windowW;
+    var advancedSearchIsOpen = false;
     $(window).resize(function () {
         windowW = $(window).width();
         if (windowW >= 992) {
             $('#js-menu-btn').removeClass('open');
             $('#js-menu').removeAttr('style');
+        }
+        if (windowW >= 481) {
+            if ($('*').is('#details-list-wrapper')) {
+                $('#details-list-wrapper').addClass('in').attr('aria-expanded', true);
+            }
+        } else {
+            if ($('*').is('#details-list-wrapper')) {
+                $('#details-list-wrapper').removeClass('in').attr('aria-expanded', false);
+            }
         }
     });
     $(window).trigger('resize');
@@ -15,6 +25,8 @@ $(document).ready(function () {
         var searchWrapper = $('#js-search-wrapper');
         var searchTop;
         var searchHeight;
+        var advancedSearch = $('#js-advanced-search');
+        var mobileAdvancedSearchBtn = $('#js-mobile-advanced-search-open-btn-wrapper');
         $(window).resize(function () {
             searchTop = search.offset().top;
             searchHeight = search.height();
@@ -24,34 +36,67 @@ $(document).ready(function () {
             fixSearch(search);
         });
     }
-    // fixSearch();
     function fixSearch(search) {
         var datepicker = $('.datepicker-here').datepicker().data('datepicker');
         datepicker.update({
             position: "bottom left"
         });
         datepicker.hide();
-        // var datepickers = $('.datepicker');
         if ($(window).scrollTop() >= searchTop + searchHeight) {
             searchWrapper.css('padding-top', searchHeight);
             search.addClass('fixed');
+            if (windowW <= 991) {
+                mobileAdvancedSearchBtn.show();
+            }
             $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
                 var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
                 if (delta < 0) {
-                    search.removeClass('bottom');
-                    // datepickers.each(function () {
-                    //     $(this).hide();
-                    // });
+                    if (!advancedSearchIsOpen) {
+                        search.removeClass('bottom');
+                        advancedSearch.removeClass('fixed');
+                    }
                 } else {
-                    search.addClass('bottom');
+                    if (!advancedSearchIsOpen) {
+                        search.addClass('bottom');
+                        advancedSearch.addClass('fixed');
+                    }
                 }
             });
         } else if ($(window).scrollTop() <= searchTop) {
             searchWrapper.css('padding-top', 0);
             search.removeClass('fixed');
             search.removeClass('bottom');
+            advancedSearch.removeClass('fixed');
+            mobileAdvancedSearchBtn.hide();
         }
     }
+    
+    //advanced-search
+    $('#js-advanced-search-open-btn').on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        advancedSearchIsOpen = true;
+        $(this).closest('#js-search-wrapper').find('#js-advanced-search').slideDown();
+        $(this).closest('#js-search-wrapper').find('#js-advanced-search-in').scrollTop(0);
+        $('body').addClass('noscroll');
+    });
+    $('#js-mobile-advanced-search-open-btn').on('click', function (e) {
+        advancedSearchIsOpen = true;
+        $(this).closest('#js-search-wrapper').find('#js-advanced-search').addClass('fixed').slideDown();
+        $(this).closest('#js-search-wrapper').find('#js-advanced-search-in').scrollTop(0);
+        $('body').addClass('noscroll');
+    });
+    $('#js-advanced-search-close-btn').on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var advancedSearch = $(this).closest('#js-advanced-search');
+        advancedSearchIsOpen = false;
+        $(advancedSearch).slideUp();
+        setTimeout(function () {
+            $(advancedSearch).removeClass('fixed');
+        }, 800)
+        $('body').removeClass('noscroll');
+    });
     
     //mobile menu
     $('#js-menu-btn').click(function (e) {
@@ -71,7 +116,7 @@ $(document).ready(function () {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 loop: true,
-                speed: 400,
+                speed: 600,
                 roundLengths: true,
                 effect: 'fade'
             });
@@ -138,16 +183,5 @@ $(document).ready(function () {
     if ($('*').is('select')) {
         $('select').styler();
     }
-    
-    //advanced-search
-    $('#js-advanced-search-open-btn').on('click', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(this).closest('#js-search').find('#js-advanced-search').slideDown();
-    });
-    $('#js-advanced-search-close-btn').on('click', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        $(this).closest('#js-advanced-search').slideUp();
-    });
+
 });

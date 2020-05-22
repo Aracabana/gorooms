@@ -32,6 +32,13 @@
             width: 50%;
         }
     }
+    /*=HOME=*/
+    /*Search*/
+    .advanced-search {
+        .search-bottom {
+            max-width: 1200px;
+        }
+    }
 }
 @media (max-width: 1219px) {
     /*=HOME=*/
@@ -50,6 +57,9 @@
                 margin-bottom: 10px;
                 width: 50%;
             }
+        }
+        .search-bottom {
+            max-width: 960px;
         }
     }
     /*About*/
@@ -83,6 +93,17 @@
         .flex-start();
         padding-left: 0;
         max-width: none;
+    }
+    /*=ROOM-PAGE=*/
+    .room-prices {
+        &-item {
+            &-price {
+                font-size: 19px;
+            }
+            &-info {
+                font-size: 17px;
+            }
+        }
     }
     /*=FOOTER=*/
     .footer {
@@ -236,6 +257,22 @@
     }
     /*=HOME=*/
     /*Search*/
+    .mobile-advanced-search-btn-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        .container {
+            padding: 10px 15px;
+            max-width: 690px;
+            background-color: @accent-color-2;
+        }
+    }
+    .search.fixed {
+        //.translate3D(0, -65%, 0);
+        //opacity: 1;
+    }
     .search-form {
         padding: 15px;
     }
@@ -254,7 +291,12 @@
         display: block;
     }
     .advanced-search {
-        padding-bottom: 20px;
+        &.fixed {
+            position: fixed;
+        }
+        &-in {
+            margin-bottom: 124px;
+        }
         &-details-col {
             &:first-child {
                 margin-bottom: 15px;
@@ -270,9 +312,12 @@
             margin-top: 5px;
             margin-left: 0;
         }
+        .search-bottom {
+            max-width: 720px;
+        }
         .search-bottom-in {
             .flex-start();
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     }
     /*Fire*/
@@ -322,9 +367,21 @@
             top: 15px;
         }
     }
+    .room-page-info-in {
+        display: block;
+    }
+    .room-type {
+        margin-bottom: 20px;
+    }
+    .room-hotel-name {
+        margin-bottom: 40px;
+    }
+    .room-metro {
+        margin-bottom: 20px;
+    }
     /*=HOTEL-PAGE=*/
     .hotel-content {
-        padding-bottom: 40px;
+        padding-bottom: 20px;
     }
     .hotel-product-slider-wrapper {
         margin-bottom: 0;
@@ -753,9 +810,38 @@
     .form-section {
         padding: 20px 15px;
     }
+    /*=HOME=*/
+    /*Fire*/
+    .room-card {
+        &-name {
+            font-size: 14px;
+        }
+    }
+    /*=HOTEL-PAGE=*/
+    .hotel-tab-content {
+        .room-card-address-link {
+            display: none;
+        }
+    }
+    .details-list {
+        &-btn {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50px;
+            height: 30px;
+            background-image: url("../img/ico-arrow-down-blue-lg.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 26px 14px;
+            &[aria-expanded="true"] {
+                .rotate(180deg);
+            }
+        }
+    }
     /*=ROOM-PAGE=*/
     .room-hotel-name {
         margin-bottom: 15px;
+        font-size: 14px;
     }
     .room-type {
         margin-bottom: 15px;
@@ -767,15 +853,10 @@
     .room-prices {
         max-width: none;
         &-item {
-            display: block;
             &-price {
-                display: block;
-                width: 100%;
-                font-size: 18px;
+                font-size: 16px;
             }
             &-info {
-                display: block;
-                width: 100%;
                 font-size: 16px;
             }
         }
@@ -794,6 +875,12 @@
     }
     .details-list {
         column-count: 1;
+    }
+    .room-page-info {
+        .room-metro,
+        .room-address {
+            display: none;
+        }
     }
     /*=404=*/
     .error-title {
@@ -982,6 +1069,17 @@
         width: 20px;
         height: 20px;
     }
+    /*=ROOM-PAGE=*/
+    .room-prices {
+        &-item {
+            &-price {
+                font-size: 14px;
+            }
+            &-info {
+                font-size: 14px;
+            }
+        }
+    }
     /*=404=*/
     .error-title {
         font-size: 120px;
@@ -999,28 +1097,44 @@
         font-size: 16px;
     }
 }
-@media (max-width: 1219px) and (max-height: 1010px) {
-    .advanced-search {
-        max-height: 870px;
+
+@media (max-width: 1219px) and (max-height: 1140px) {
+    .advanced-search-in {
+        max-height: 820px;
     }
 }
-@media (max-height: 880px) {
-    .advanced-search {
-        max-height: 670px;
+@media (max-width: 1219px) and (max-height: 1060px) {
+    .advanced-search-in {
+        max-height: 720px;
     }
 }
-@media (max-height: 715px) {
-    .advanced-search {
+@media (max-height: 960px) {
+    .advanced-search-in {
+        max-height: 620px;
+    }
+}
+@media (max-height: 860px) {
+    .advanced-search-in {
         max-height: 520px;
     }
 }
-@media (max-height: 600px) {
-    .advanced-search {
+@media (max-height: 760px) {
+    .advanced-search-in {
         max-height: 420px;
     }
 }
+@media (max-height: 660px) {
+    .advanced-search-in {
+        max-height: 320px;
+    }
+}
+@media (max-height: 560px) {
+    .advanced-search-in {
+        max-height: 220px;
+    }
+}
 @media (max-height: 460px) {
-    .advanced-search {
-        max-height: 270px;
+    .advanced-search-in {
+        max-height: 120px;
     }
 }

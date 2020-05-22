@@ -16,6 +16,9 @@ body {
     color: @text-color;
     background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
+    &.noscroll {
+        overflow-y: hidden;
+    }
 }
 .xxl-display {
     display: none;
@@ -139,6 +142,9 @@ h4 {
     }
     &-mb-lg {
         margin-bottom: 50px;
+    }
+    &-mb-none {
+        margin-bottom: 0;
     }
     .count {
         margin-left: 3px;
@@ -387,9 +393,9 @@ h4 {
     display: block;
     .box-sizing();
     top: 50%;
-    margin-top: -27.5px;
-    width: 34px;
-    height: 55px;
+    margin-top: -37.5px;
+    width: 40px;
+    height: 75px;
     background-repeat: no-repeat;
     background-size: 14px 25px;
     background-position: center;
@@ -399,10 +405,10 @@ h4 {
         display: none;
     }
     &-prev {
-        left: 3px;
+        left: 0;
     }
     &-next {
-        right: 3px;
+        right: 0;
     }
     &:hover, &:active, &:focus {
         outline: none;
@@ -934,7 +940,11 @@ select.form-control {
 }
 /*Search*/
 .search-wrapper {
+    position: relative;
     margin-top: 4px;
+}
+.mobile-advanced-search-btn-wrapper {
+    display: none;
 }
 .search {
     position: relative;
@@ -1073,7 +1083,7 @@ select.form-control {
     .flex();
     .align-items-center();
     .space-between();
-    margin-top: 10px;
+    padding-top: 10px;
 }
 .search-dates {
     .flex();
@@ -1120,19 +1130,24 @@ select.form-control {
     top: 0;
     right: 0;
     z-index: 110;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: none;
     .box-sizing();
     border-top: 2px solid @bg-color;
-    padding: 20px 0 30px;
-    max-height: 1000px;
+    padding: 20px 0 0;
     background-color: #efefef;
     &::-webkit-scrollbar {
         width: 4px;
         background-color: fade(@text-color, 20%);
     }
     .box-shadow(0, 0, 10px, 0, rgba(0, 0, 1, 0.3));
+    &-in {
+        .box-sizing();
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-bottom: 80px;
+        height: 100%;
+        max-height: 920px;
+    }
     .search-tags {
         border-bottom: none;
         padding: 8px 0;
@@ -1349,12 +1364,23 @@ select.form-control {
         }
         &-map {
             margin-right: 20px;
-            background-image: url("../img/sprite.png");
-            background-position: -94px -82px;
+            background-image: url("../img/ico-look-on-map-pasive.svg");
+            background-size: 30px 30px;
             &:hover, &:active {
-                background-position: -127px -82px;
+                background-image: url("../img/ico-look-on-map-active.svg");
             }
         }
+    }
+    .search-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: 105;
+        width: 100%;
+        max-width: 1440px;
+        padding: 20px 15px;
+        background-color: #efefef;
+        .translateX(-50%);
     }
 }
 /*Popular*/
@@ -1366,6 +1392,8 @@ select.form-control {
         display: inline-block;
         vertical-align: text-bottom;
         margin-right: 5px;
+        width: 20px;
+        height: 20px;
     }
 }
 .rating {
@@ -1385,12 +1413,12 @@ select.form-control {
             position: absolute;
             left: 0;
             top: 50%;
-            margin-top: -11px;
-            width: 17px;
-            height: 17px;
-            background-image: url("../img/sprite.png");
+            margin-top: -10px;
+            width: 18px;
+            height: 18px;
+            background-image: url("../img/ico-star-small-orange.svg");
             background-repeat: no-repeat;
-            background-position: -109px -53px;
+            background-size: 100%;
         }
         span {
             font-weight: 900;
@@ -1433,11 +1461,11 @@ select.form-control {
                 left: 19px;
                 top: 50%;
                 margin-top: -14px;
-                width: 23px;
+                width: 22px;
                 height: 22px;
-                background-image: url("../img/sprite.png");
+                background-image: url("../img/ico-star-big-white.svg");
                 background-repeat: no-repeat;
-                background-position: -118px -24px;
+                background-size: 100%;
             }
         }
         &-content {
@@ -1458,11 +1486,11 @@ select.form-control {
                 left: 0;
                 top: 50%;
                 margin-top: -9px;
-                width: 17px;
-                height: 17px;
-                background-image: url("../img/sprite.png");
+                width: 18px;
+                height: 18px;
+                background-image: url("../img/ico-star-small-orange.svg");
                 background-repeat: no-repeat;
-                background-position: -109px -53px;
+                background-size: 100%;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -1781,7 +1809,7 @@ select.form-control {
                         top: 0;
                         width: 22px;
                         height: 22px;
-                        background-image: url("../img/ico-cross.png");
+                        background-image: url("../img/ico-red-crossout.svg");
                         background-repeat: no-repeat;
                         background-size: 100%;
                     }
@@ -1939,6 +1967,9 @@ select.form-control {
     .flex();
     .flex-direction-column();
     .space-between();
+    .room-prices {
+        margin-bottom: 0;
+    }
 }
 .hotel-product-slider-wrapper {
     margin-left: auto;
@@ -1992,7 +2023,7 @@ select.form-control {
         height: 165px;
         text-align: center;
         color: #ffffff;
-        background-image: url("../img/bg-star.png");
+        background-image: url("../img/ico-star-big-orange.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -2024,11 +2055,11 @@ select.form-control {
             left: 0;
             top: 50%;
             margin-top: -15px;
-            width: 31px;
+            width: 30px;
             height: 30px;
             background-repeat: no-repeat;
-            background-image: url("../img/sprite.png");
-            background-position: -99px -155px;
+            background-image: url("../img/ico-star-small-orange.svg");
+            background-size: 100%;
         }
         span {
             font-weight: 900;
@@ -2070,7 +2101,7 @@ select.form-control {
     margin-left: 5px;
     height: 24px;
     width: 24px;
-    background-image: url("../img/ico-star-empty.png");
+    background-image: url("../img/ico-star-orange-empty.svg");
     background-size: contain;
     background-repeat: no-repeat;
     &:last-child {
@@ -2080,7 +2111,7 @@ select.form-control {
 .stars input:checked ~ label,
 .stars label:hover,
 .stars label:hover ~ label {
-    background-image: url("../img/ico-star-full.png");
+    background-image: url("../img/ico-star-small-orange.svg");
 }
 .stars-title {
     font-weight: 700;
@@ -2161,8 +2192,8 @@ select.form-control {
                 width: 34px;
                 height: 34px;
                 background-repeat: no-repeat;
-                background-image: url("../img/sprite.png");
-                background-position: -65px -143px;
+                background-image: url("../img/ico-star-big-orange.svg");
+                background-size: 100%;
             }
         }
     }
@@ -2206,20 +2237,20 @@ select.form-control {
     padding: 0 30px;
     .swiper-button {
         top: 50%;
-        margin-top: -25px;
-        width: 31px;
-        height: 50px;
+        margin-top: -35px;
+        width: 41px;
+        height: 70px;
         background-size: 11px 20px;
     }
     .swiper-button-prev {
-        left: -10px;
+        left: -15px;
         background-image: url("../img/ico-arrow-left-blue.svg");
         &:hover, &:active {
             background-image: url("../img/ico-arrow-left.svg");
         }
     }
     .swiper-button-next {
-        right: -10px;
+        right: -15px;
         background-image: url("../img/ico-arrow-right-blue.svg");
         &:hover, &:active {
             background-image: url("../img/ico-arrow-right.svg");
@@ -2245,7 +2276,14 @@ select.form-control {
     font-weight: 900;
     font-size: 18px;
 }
+.room-page-info-in {
+    .flex();
+    .flex-direction-column();
+    .flex-start();
+
+}
 .room-hotel-name {
+    .order(1);
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 18px;
@@ -2258,6 +2296,7 @@ select.form-control {
     }
 }
 .room-type {
+    .order(2);
     margin-bottom: 40px;
     font-weight: 700;
     font-size: 18px;
@@ -2318,8 +2357,12 @@ select.form-control {
     }
 }
 .details-list {
+    padding-top: 25px;
     column-gap: 30px;
     column-count: 3;
+    &-btn {
+        display: none;
+    }
     li {
         margin-bottom: 10px;
         color: @text-color-medium;
