@@ -42,6 +42,7 @@ $(document).ready(function () {
         datepicker.hide();
         if ($(window).scrollTop() >= searchTop + searchHeight) {
             searchWrapper.css('padding-top', searchHeight);
+            search.removeClass('prefixed');
             search.addClass('fixed');
             if (windowW <= 991) {
                 search.addClass('show-advanced-btn');
@@ -58,8 +59,11 @@ $(document).ready(function () {
 
                 }
             });
+        } else if ($(window).scrollTop() >= searchTop && $(window).scrollTop() < searchTop + searchHeight) {
+            search.addClass('prefixed');
         } else if ($(window).scrollTop() <= searchTop) {
             searchWrapper.css('padding-top', 0);
+            search.removeClass('prefixed');
             search.removeClass('fixed');
             search.removeClass('bottom');
             search.removeClass('show-advanced-btn');
@@ -71,7 +75,7 @@ $(document).ready(function () {
     $('#js-advanced-search-open-btn').on('click', function (e) {
         e.stopPropagation();
         e.preventDefault();
-        var isSearchOnTop = $('#js-search').hasClass('bottom') || $('#js-search').hasClass('show-advanced-btn');
+        var isSearchOnTop = $('#js-search').hasClass('bottom') || $('#js-search').hasClass('show-advanced-btn') || $('#js-search').hasClass('prefixed');
         if(isSearchOnTop) {
             $('#js-advanced-search').addClass('fixed');
         } else {
