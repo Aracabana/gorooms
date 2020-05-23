@@ -25,8 +25,6 @@ $(document).ready(function () {
         var searchWrapper = $('#js-search-wrapper');
         var searchTop;
         var searchHeight;
-        var advancedSearch = $('#js-advanced-search');
-        var mobileAdvancedSearchBtn = $('#js-mobile-advanced-search-open-btn-wrapper');
         $(window).resize(function () {
             searchTop = search.offset().top;
             searchHeight = search.height();
@@ -85,17 +83,10 @@ $(document).ready(function () {
 
         $('body').addClass('noscroll');
     });
-    // $('#js-mobile-advanced-search-open-btn').on('click', function (e) {
-    //     advancedSearchIsOpen = true;
-    //     $(this).closest('#js-search-wrapper').find('#js-advanced-search').addClass('fixed').slideDown();
-    //     $(this).closest('#js-search-wrapper').find('#js-advanced-search-in').scrollTop(0);
-    //     $('body').addClass('noscroll');
-    // });
     $('#js-advanced-search-close-btn').on('click', function (e) {
         e.stopPropagation();
         e.preventDefault();
         var advancedSearch = $(this).closest('#js-advanced-search');
-        advancedSearchIsOpen = false;
         $(advancedSearch).slideUp();
         setTimeout(function () {
             $(advancedSearch).removeClass('fixed');
