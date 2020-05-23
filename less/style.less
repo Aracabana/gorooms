@@ -1138,10 +1138,6 @@ select.form-control {
             max-height: calc(100vh - 70px);
         }
     }
-    &::-webkit-scrollbar {
-        width: 4px;
-        background-color: fade(@text-color, 20%);
-    }
     .box-shadow(0, 0, 10px, 0, rgba(0, 0, 1, 0.3));
     &-in {
         .box-sizing();
@@ -1152,6 +1148,10 @@ select.form-control {
         height: 100%;
         max-height: -webkit-calc(100vh - 70px - 132px);
         max-height: calc(100vh - 70px - 132px);
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: fade(@text-color, 20%);
+        }
     }
     .search-tags {
         border-bottom: none;

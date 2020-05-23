@@ -1635,10 +1635,6 @@ select.form-control {
   max-height: -webkit-calc(30vh);
   max-height: calc(100vh - 70px);
 }
-.advanced-search::-webkit-scrollbar {
-  width: 4px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
 .advanced-search-in {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1650,6 +1646,10 @@ select.form-control {
   height: 100%;
   max-height: -webkit-calc(-102vh);
   max-height: calc(100vh - 70px - 132px);
+}
+.advanced-search-in::-webkit-scrollbar {
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .advanced-search .search-tags {
   border-bottom: none;
@@ -4149,8 +4149,8 @@ button.modal-close:focus {
   }
   .advanced-search-in {
     margin-bottom: 114px;
-    max-height: -webkit-calc(-80vh);
-    max-height: calc(100vh - 114px - 66px);
+    max-height: -webkit-calc(-86vh);
+    max-height: calc(94vh - 114px - 66px);
   }
   .advanced-search-details-col:first-child {
     margin-bottom: 15px;
@@ -4440,8 +4440,8 @@ button.modal-close:focus {
   }
   .advanced-search-in {
     margin-bottom: 122px;
-    max-height: -webkit-calc(-83vh);
-    max-height: calc(100vh - 122px - 61px);
+    max-height: -webkit-calc(-89vh);
+    max-height: calc(94vh - 122px - 61px);
   }
   .advanced-search-prices {
     padding-bottom: 0;
@@ -4647,8 +4647,8 @@ button.modal-close:focus {
   }
   .advanced-search-in {
     margin-bottom: 153px;
-    max-height: -webkit-calc(-114vh);
-    max-height: calc(100vh - 153px - 61px);
+    max-height: -webkit-calc(-120vh);
+    max-height: calc(94vh - 153px - 61px);
   }
   .advanced-search-reset-btn {
     margin-right: 0;
