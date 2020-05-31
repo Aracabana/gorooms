@@ -1,11 +1,22 @@
 $(document).ready(function () {
     var windowW;
     var searchBoxOnTop = false;
+    var lastScrollTop = 0;
+    var detectMobResult = detectMob();
+    var header = $('.header');
     $(window).resize(function () {
         windowW = $(window).width();
         if (windowW >= 992) {
             $('#js-menu-btn').removeClass('open');
             $('#js-menu').removeAttr('style');
+            $('.rating-dropdown').removeAttr('style');
+            if ($('*').is('#review-form-wrapper')) {
+                $('#review-form-wrapper').addClass('in').attr('aria-expanded', true);
+            }
+        } else {
+            if ($('*').is('#review-form-wrapper')) {
+                $('#review-form-wrapper').removeClass('in').attr('aria-expanded', false);
+            }
         }
         if (windowW >= 481) {
             if ($('*').is('#details-list-wrapper')) {
@@ -18,20 +29,43 @@ $(document).ready(function () {
         }
     });
     $(window).trigger('resize');
+    // if (detectMobResult) {
+    //     $('#book-popup .form-control-date').removeClass('datepicker-here').attr({
+    //         'type': 'date',
+    //         'readonly': false
+    //     });
+    // }
    
     //scroll search
     if ($('*').is('#js-search')) {
         var search = $('#js-search');
         var searchWrapper = $('#js-search-wrapper');
-        var searchTop;
-        var searchHeight;
-        $(window).resize(function () {
-            searchTop = search.offset().top;
-            searchHeight = search.height();
-        });
-        $(window).trigger('resize');
+        var searchTop = header.height() + 4;
+        var searchHeight = search.height();
+        if (!detectMobResult) {
+            $(window).resize(function () {
+                searchTop = header.height() + 4;
+                searchHeight = search.height();
+            });
+            $(window).trigger('resize');
+        } else {
+            $(window).on('orientationchange', function () {
+                searchTop = header.height() + 4;
+                searchHeight = search.height();
+            });
+        }
+        
         $(window).scroll(function () {
             fixSearch(search);
+            var st = $(this).scrollTop();
+            if (st > lastScrollTop){
+                search.removeClass('bottom');
+            } else {
+                if (!searchBoxOnTop) {
+                    search.addClass('bottom');
+                }
+            }
+            lastScrollTop = st;
         });
     }
     function fixSearch(search) {
@@ -48,17 +82,6 @@ $(document).ready(function () {
                 search.addClass('show-advanced-btn');
             }
             searchBoxOnTop = false;
-            $(window).bind("mousewheel DOMMouseScroll MozMousePixelScroll", function (event) {
-                var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-                if (delta < 0) {
-                    search.removeClass('bottom');
-                } else {
-                    if(!searchBoxOnTop) {
-                        search.addClass('bottom');
-                    }
-
-                }
-            });
         } else if ($(window).scrollTop() >= searchTop && $(window).scrollTop() < searchTop + searchHeight) {
             search.addClass('prefixed');
         } else if ($(window).scrollTop() <= searchTop) {
@@ -164,6 +187,7 @@ $(document).ready(function () {
     
     //masked input
     $('input[type="tel"]').mask('+7 (999) 999 99 99');
+    $('.js-time').mask('99:99');
     
     //tables
     if($('*').is('.text-section table')) {
@@ -183,5 +207,28 @@ $(document).ready(function () {
     if ($('*').is('select')) {
         $('select').styler();
     }
-
+    
+    //rating
+    $('.rating-title').click(function () {
+        if (windowW <= 991) {
+            $('.rating-dropdown').slideToggle();
+        }
+    });
+    
+    
+    function detectMob() {
+        const toMatch = [
+            /Android/i,
+            /webOS/i,
+            /iPhone/i,
+            /iPad/i,
+            /iPod/i,
+            /BlackBerry/i,
+            /Windows Phone/i
+        ];
+        
+        return toMatch.some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        });
+    }
 });

@@ -136,6 +136,15 @@
         }
     }
 }
+@media (min-width: 992px) {
+    .rating {
+        &:hover {
+            > .rating-dropdown {
+                display: block;
+            }
+        }
+    }
+}
 @media (max-width: 991px) {
     /*=HEADER=*/
     .header-top {
@@ -301,8 +310,10 @@
         }
         &-in {
             margin-bottom: 114px;
-            max-height: -webkit-calc(94vh - 114px - 66px);
-            max-height: calc(94vh - 114px - 66px);
+            //max-height: -webkit-calc(94vh - 114px - 66px);
+            //max-height: calc(94vh - 114px - 66px);
+            max-height: -webkit-calc(100vh - 114px - 66px);
+            max-height: calc(100vh - 114px - 66px);
         }
         &-details-col {
             &:first-child {
@@ -368,11 +379,14 @@
     }
     /*=ROOM-PAGE=*/
     .product-slider-wrapper {
-        margin: 0 auto 40px;
+        margin: 0 auto;
         .rating {
             left: 15px;
             top: 15px;
         }
+    }
+    .product-slider-small-wrapper {
+        display: none;
     }
     .room-page-info-in {
         display: block;
@@ -403,7 +417,7 @@
         }
     }
     .hotel-map-wrapper {
-        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .total-rating {
         &-main {
@@ -430,6 +444,31 @@
         }
         &-rating {
             padding: 0 15px 15px;
+        }
+    }
+    .review-form {
+        &-desktop-title {
+            display: none;
+        }
+        &-mobile-title {
+            display: block;
+            margin-bottom: 0;
+        }
+        &-btn {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50px;
+            height: 30px;
+            background-image: url("../img/ico-arrow-down-lg-black.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 26px 14px;
+            &[aria-expanded="true"] {
+                .rotate(180deg);
+            }
+        }
+        .row {
+            margin-top: 25px;
         }
     }
     /*=CONTACTS=*/
@@ -595,8 +634,10 @@
         }
         &-in {
             margin-bottom: 122px;
-            max-height: -webkit-calc(94vh - 122px - 61px);
-            max-height: calc(94vh - 122px - 61px);
+            //max-height: -webkit-calc(94vh - 122px - 61px);
+            //max-height: calc(94vh - 122px - 61px);
+            max-height: -webkit-calc(100vh - 122px - 61px);
+            max-height: calc(100vh - 122px - 61px);
         }
         &-prices {
             padding-bottom: 0;
@@ -822,8 +863,10 @@
         }
         &-in {
             margin-bottom: 153px;
-            max-height: -webkit-calc(94vh - 153px - 61px);
-            max-height: calc(94vh - 153px - 61px);
+            //max-height: -webkit-calc(94vh - 153px - 61px);
+            //max-height: calc(94vh - 153px - 61px);
+            max-height: -webkit-calc(100vh - 153px - 61px);
+            max-height: calc(100vh - 153px - 61px);
         }
         &-reset-btn {
             margin-right: 0;

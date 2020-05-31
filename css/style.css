@@ -1008,6 +1008,31 @@ input::-ms-clear {
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
+.form-control-sm {
+  height: 30px;
+}
+.form-control-sm::-webkit-calendar-picker-indicator {
+  color: transparent;
+  margin-right: -8px;
+  width: 12px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-image: url("../img/ico-arrow-down-blue-sm.svg");
+  background-position: center;
+  background-size: 12px 8px;
+}
+.form-control-sm::-webkit-input-placeholder {
+  color: #636363;
+}
+.form-control-sm::-moz-placeholder {
+  color: #636363;
+}
+.form-control-sm:-moz-placeholder {
+  color: #636363;
+}
+.form-control-sm:-ms-input-placeholder {
+  color: #636363;
+}
 .form-control-border {
   border: 2px solid #f2f2f2;
 }
@@ -1153,6 +1178,18 @@ select.form-control {
 }
 .form-control-date:focus {
   font-weight: bold;
+}
+.form-control-date[type="date"] {
+  padding-right: 8px;
+  background-image: none;
+}
+.form-control-date[type="date"]::-webkit-calendar-picker-indicator {
+  margin-left: 2px;
+  right: 2px;
+  background-image: url("../img/ico-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 20px 20px;
 }
 .datepicker {
   z-index: 1051;
@@ -1930,9 +1967,6 @@ select.form-control {
   margin-right: 5px;
   width: 20px;
   height: 20px;
-}
-.rating:hover > .rating-dropdown {
-  display: block;
 }
 .rating-title {
   position: relative;
@@ -2793,6 +2827,9 @@ select.form-control {
   margin-bottom: 30px;
   padding: 30px 65px 40px;
   background-color: #f5f5f5;
+}
+.review-form-mobile-title {
+  display: none;
 }
 .stars-wrapper {
   display: -webkit-box;
@@ -3949,6 +3986,11 @@ button.modal-close:focus {
     margin-top: 25px;
   }
 }
+@media (min-width: 992px) {
+  .rating:hover > .rating-dropdown {
+    display: block;
+  }
+}
 @media (max-width: 991px) {
   /*=HEADER=*/
   .header-top {
@@ -4149,8 +4191,8 @@ button.modal-close:focus {
   }
   .advanced-search-in {
     margin-bottom: 114px;
-    max-height: -webkit-calc(-86vh);
-    max-height: calc(94vh - 114px - 66px);
+    max-height: -webkit-calc(-80vh);
+    max-height: calc(100vh - 114px - 66px);
   }
   .advanced-search-details-col:first-child {
     margin-bottom: 15px;
@@ -4214,11 +4256,14 @@ button.modal-close:focus {
   }
   /*=ROOM-PAGE=*/
   .product-slider-wrapper {
-    margin: 0 auto 40px;
+    margin: 0 auto;
   }
   .product-slider-wrapper .rating {
     left: 15px;
     top: 15px;
+  }
+  .product-slider-small-wrapper {
+    display: none;
   }
   .room-page-info-in {
     display: block;
@@ -4247,7 +4292,7 @@ button.modal-close:focus {
     font-size: 14px;
   }
   .hotel-map-wrapper {
-    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .total-rating-main {
     margin-right: 20px;
@@ -4271,6 +4316,33 @@ button.modal-close:focus {
   }
   .review-rating {
     padding: 0 15px 15px;
+  }
+  .review-form-desktop-title {
+    display: none;
+  }
+  .review-form-mobile-title {
+    display: block;
+    margin-bottom: 0;
+  }
+  .review-form-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 30px;
+    background-image: url("../img/ico-arrow-down-lg-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 14px;
+  }
+  .review-form-btn[aria-expanded="true"] {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .review-form .row {
+    margin-top: 25px;
   }
   /*=CONTACTS=*/
   .contacts-info {
@@ -4440,8 +4512,8 @@ button.modal-close:focus {
   }
   .advanced-search-in {
     margin-bottom: 122px;
-    max-height: -webkit-calc(-89vh);
-    max-height: calc(94vh - 122px - 61px);
+    max-height: -webkit-calc(-83vh);
+    max-height: calc(100vh - 122px - 61px);
   }
   .advanced-search-prices {
     padding-bottom: 0;
@@ -4647,8 +4719,8 @@ button.modal-close:focus {
   }
   .advanced-search-in {
     margin-bottom: 153px;
-    max-height: -webkit-calc(-120vh);
-    max-height: calc(94vh - 153px - 61px);
+    max-height: -webkit-calc(-114vh);
+    max-height: calc(100vh - 153px - 61px);
   }
   .advanced-search-reset-btn {
     margin-right: 0;

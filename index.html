@@ -135,40 +135,46 @@
                         <div class="advanced-search-location">
                             <p class="advanced-search-title">Расположение</p>
                             <div class="form-group">
-                                <select name="advanced-search-location-city" id="advanced-search-location-city" class="form-control"
-                                        data-placeholder="Город">
-                                    <option value=""></option>
-                                    <option value="city1">Город 1</option>
-                                    <option value="city2">Город 2</option>
-                                    <option value="city3">Город 3</option>
-                                </select>
+                                <input id="advanced-search-location-city" list="advanced-search-location-city-list" name="advanced-search-location-city" type="text"
+                                       class="form-control form-control-sm" placeholder="Город">
+                                <datalist id="advanced-search-location-city-list">
+                                    <option value="Москва">
+                                    <option value="Владивосток">
+                                    <option value="Санкт-Петербург">
+                                    <option value="Самара">
+                                    <option value="Рязань">
+                                </datalist>
                             </div>
                             <div class="form-group">
-                                <select name="advanced-search-location-district" id="advanced-search-location-district" class="form-control"
-                                        data-placeholder="Округ">
-                                    <option value=""></option>
-                                    <option value="district1">Округ 1</option>
-                                    <option value="district2">Округ 2</option>
-                                    <option value="district3">Округ 3</option>
-                                </select>
+                                <input id="advanced-search-location-district" name="advanced-search-location-district"
+                                       list="advanced-search-location-district-list" type="text"
+                                       class="form-control form-control-sm" placeholder="Округ">
+                                <datalist id="advanced-search-location-district-list">
+                                    <option value="Центральный">
+                                    <option value="Северный">
+                                    <option value="Восточный">
+                                    <option value="Западный">
+                                </datalist>
                             </div>
                             <div class="form-group">
-                                <select name="advanced-search-location-region" id="advanced-search-location-region" class="form-control"
-                                        data-placeholder="Район">
-                                    <option value=""></option>
-                                    <option value="region1">Район 1</option>
-                                    <option value="region2">Район 2</option>
-                                    <option value="region3">Район 3</option>
-                                </select>
+                                <input id="advanced-search-location-region" list="advanced-search-location-region-list" name="advanced-search-location-region" type="text"
+                                       class="form-control form-control-sm" placeholder="Район">
+                                <datalist id="advanced-search-location-region-list">
+                                    <option value="Центральный">
+                                    <option value="Северный">
+                                    <option value="Восточный">
+                                    <option value="Западный">
+                                </datalist>
                             </div>
                             <div class="form-group">
-                                <select name="advanced-search-location-metro" id="advanced-search-location-metro" class="form-control"
-                                        data-placeholder="Метро">
-                                    <option value=""></option>
-                                    <option value="metro1">Метро 1</option>
-                                    <option value="metro2">Метро 2</option>
-                                    <option value="metro3">Метро 3</option>
-                                </select>
+                                <input id="advanced-search-location-metro" list="advanced-search-location-metro-list" name="advanced-search-location-metro" type="text"
+                                       class="form-control form-control-sm" placeholder="Метро">
+                                <datalist id="advanced-search-location-metro-list">
+                                    <option value="Измайловская">
+                                    <option value="Дмитровская">
+                                    <option value="Кропоткинская">
+                                    <option value="Чеховская">
+                                </datalist>
                             </div>
                             <div class="form-group">
                                 <select name="advanced-search-location-type" id="advanced-search-location-type" class="form-control"
@@ -1936,27 +1942,17 @@
                         <div class="form-group form-group-dates">
                             <div class="form-group-date">
                                 <p class="form-group-date-label">Заезд:<span>*</span></p>
-                                <input id="from-date" name="from-date" type="text" class="form-control form-control-date datepicker-here"
-                                       placeholder="10.06.2020" data-auto-close="true" readonly required>
-                                <select name="from-time" id="from-time" class="form-control form-control-time" required>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select>
+                                <input id="from-date" name="from-date" type="date" class="form-control form-control-date" placeholder="06.06.2020"
+                                       required>
+                                <input id="from-time" name="from-time" type="text" class="form-control form-control-time js-time"
+                                       placeholder="14:00" required>
                             </div>
                             <div class="form-group-date">
                                 <p class="form-group-date-label">Выезд:<span>*</span></p>
-                                <input id="to-date" name="to-date" type="text" class="form-control form-control-date datepicker-here"
-                                       placeholder="10.06.2020" data-auto-close="true" readonly required>
-                                <select name="to-time" id="to-time" class="form-control form-control-time" required>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select>
+                                <input id="to-date" name="to-date" type="date"
+                                       class="form-control form-control-date" placeholder="06.06.2020" required>
+                                <input id="to-time" name="to-time" type="text" class="form-control form-control-time js-time" placeholder="14:00"
+                                       required>
                             </div>
                         </div>
                     </div>

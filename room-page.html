@@ -986,25 +986,16 @@
                                 <p class="form-group-date-label">Заезд:<span>*</span></p>
                                 <input id="from-date" name="from-date" type="text" class="form-control form-control-date datepicker-here"
                                        placeholder="10.06.2020" data-auto-close="true" readonly required>
-                                <select name="from-time" id="from-time" class="form-control form-control-time" required>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select>
+                                <input id="from-time" name="from-time" type="text" class="form-control form-control-time js-time"
+                                       placeholder="14:00" required>
                             </div>
                             <div class="form-group-date">
                                 <p class="form-group-date-label">Выезд:<span>*</span></p>
-                                <input id="to-date" name="to-date" type="text" class="form-control form-control-date datepicker-here"
+                                <input id="to-date" name="to-date" type="text"
+                                       class="form-control form-control-date datepicker-here"
                                        placeholder="10.06.2020" data-auto-close="true" readonly required>
-                                <select name="to-time" id="to-time" class="form-control form-control-time" required>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select>
+                                <input id="to-time" name="to-time" type="text" class="form-control form-control-time js-time" placeholder="14:00"
+                                       required>
                             </div>
                         </div>
                     </div>

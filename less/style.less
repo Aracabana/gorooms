@@ -666,6 +666,22 @@ input::-ms-clear {
     color: @text-color;
     background-color: #ffffff;
     .transition();
+    &-sm {
+        height: 30px;
+        &::-webkit-calendar-picker-indicator {
+            color: transparent;
+            margin-right: -8px;
+            width: 12px;
+            height: 8px;
+            background-repeat: no-repeat;
+            background-image: url("../img/ico-arrow-down-blue-sm.svg");
+            background-position: center;
+            background-size: 12px 8px;
+        }
+        .placeholder({
+            color: @text-color-light;
+        });
+    }
     &-border {
         border: 2px solid @bg-color;
     }
@@ -784,6 +800,18 @@ select.form-control {
     background-size: 20px 20px;
     &:focus {
         font-weight: bold;
+    }
+    &[type="date"] {
+        padding-right: 8px;
+        background-image: none;
+        &::-webkit-calendar-picker-indicator {
+            margin-left: 2px;
+            right: 2px;
+            background-image: url("../img/ico-calendar.svg");
+            background-repeat: no-repeat;
+            background-position: right 0 center;
+            background-size: 20px 20px;
+        }
     }
 }
 .datepicker {
@@ -1402,11 +1430,6 @@ select.form-control {
     }
 }
 .rating {
-    &:hover {
-        > .rating-dropdown {
-            display: block;
-        }
-    }
     &-title {
         position: relative;
         padding-left: 25px;
@@ -2077,6 +2100,9 @@ select.form-control {
     margin-bottom: 30px;
     padding: 30px 65px 40px;
     background-color: @bg-color-light;
+    &-mobile-title {
+        display: none;
+    }
 }
 .stars-wrapper {
     .flex();
