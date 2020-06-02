@@ -1745,8 +1745,8 @@ select.form-control {
         margin-bottom: 1px;
         border: 2px solid @bg-color;
         padding: 10px 15px 0;
-        height: -webkit-calc(100% - 153px);
-        height: calc(100% - 153px);
+        height: -webkit-calc(100% - 156px);
+        height: calc(100% - 156px);
         .transition();
     }
     &-header {
@@ -1856,6 +1856,7 @@ select.form-control {
     &-btns {
         .flex();
         .space-between();
+        border-top: 2px solid #ffffff;
         .show-tel-wrapper, > .btn {
             width: 50%;
         }
@@ -1872,6 +1873,9 @@ select.form-control {
     }
     .room-card-in {
         width: 59%;
+    }
+    .room-card-btns {
+        border-left: 2px solid #ffffff;
     }
 }
 .btn-fire {

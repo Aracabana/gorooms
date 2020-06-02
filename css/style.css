@@ -2327,8 +2327,8 @@ select.form-control {
   margin-bottom: 1px;
   border: 2px solid #f2f2f2;
   padding: 10px 15px 0;
-  height: -webkit-calc(-53%);
-  height: calc(100% - 153px);
+  height: -webkit-calc(-56%);
+  height: calc(100% - 156px);
   -webkit-transition: all ease 0.3s;
   -moz-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
@@ -2483,6 +2483,7 @@ select.form-control {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  border-top: 2px solid #ffffff;
 }
 .room-card-btns .show-tel-wrapper,
 .room-card-btns > .btn {
@@ -2506,6 +2507,9 @@ select.form-control {
 }
 .room-card-horizontal .room-card-in {
   width: 59%;
+}
+.room-card-horizontal .room-card-btns {
+  border-left: 2px solid #ffffff;
 }
 .btn-fire {
   padding-left: 30px;
