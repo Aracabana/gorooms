@@ -29,12 +29,9 @@ $(document).ready(function () {
         }
     });
     $(window).trigger('resize');
-    // if (detectMobResult) {
-    //     $('#book-popup .form-control-date').removeClass('datepicker-here').attr({
-    //         'type': 'date',
-    //         'readonly': false
-    //     });
-    // }
+    if (detectMobResult) {
+        $('#book-popup .form-control-time').removeClass('js-time').attr('type', 'time');
+    }
    
     //scroll search
     if ($('*').is('#js-search')) {
