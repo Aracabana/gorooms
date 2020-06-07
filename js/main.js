@@ -51,7 +51,6 @@ $(document).ready(function () {
                 searchHeight = search.height();
             });
         }
-        
         $(window).scroll(function () {
             fixSearch(search);
             var st = $(this).scrollTop();
@@ -228,4 +227,5 @@ $(document).ready(function () {
             return navigator.userAgent.match(toMatchItem);
         });
     }
+
 });

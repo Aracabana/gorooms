@@ -802,11 +802,12 @@ select.form-control {
         font-weight: bold;
     }
     &[type="date"] {
+        padding-left: 8px;
         padding-right: 8px;
         background-image: none;
         &::-webkit-calendar-picker-indicator {
             margin-left: 2px;
-            right: 2px;
+            right: 0;
             background-image: url("../img/ico-calendar.svg");
             background-repeat: no-repeat;
             background-position: right 0 center;
@@ -958,6 +959,35 @@ select.form-control {
 .form-control-time .jq-selectbox__select {
     width: 86px;
     height: 30px;
+}
+.form-control-time {
+    &[type="time"] {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 5px;
+        &::-webkit-calendar-picker-indicator {
+            margin-left: 2px;
+            right: 0;
+            //background-image: url("../img/ico-calendar.svg");
+            background-repeat: no-repeat;
+            background-position: right 0 center;
+            //background-size: 20px 20px;
+        }
+    }
+}
+@supports (-webkit-touch-callout: none) {
+    .form-control-date {
+        &[type="date"] {
+            padding-top: 6px !important;
+            -webkit-appearance: textfield;
+        }
+    }
+    .form-control-time {
+        &[type="time"] {
+            padding-top: 6px !important;
+            -webkit-appearance: textfield;
+        }
+    }
 }
 /*=HOME=*/
 .home-section {
@@ -1337,7 +1367,7 @@ select.form-control {
                 margin-top: -14px;
                 width: 26px;
                 height: 26px;
-                background-position: 0 -82px;
+                background-position: 0 0;
                 background-image: url("../img/sprite.png");
             }
         }
@@ -1432,6 +1462,8 @@ select.form-control {
 .rating {
     &-title {
         position: relative;
+        padding-top: 15px;
+        padding-bottom: 15px;
         padding-left: 25px;
         font-size: 14px;
         color: #ffffff;
@@ -1458,6 +1490,7 @@ select.form-control {
         display: none;
         left: -20px;
         top: 100%;
+        margin-top: -15px;
         padding-top: 17px;
         &-in {
             position: relative;
@@ -1550,7 +1583,7 @@ select.form-control {
             height: 20px;
             background-image: url("../img/sprite.png");
             background-repeat: no-repeat;
-            background-position: -149px -29px;
+            background-position: -31px 0;
         }
         &.visible {
             .flex();
@@ -1564,7 +1597,7 @@ select.form-control {
     .rating {
         position: absolute;
         left: 20px;
-        top: 20px;
+        top: 5px;
         z-index: 10;
     }
     &-slider {
@@ -1711,7 +1744,7 @@ select.form-control {
     .rating {
         position: absolute;
         left: 15px;
-        top: 30px;
+        top: 15px;
         z-index: 10;
     }
     .rating-dropdown-content {
@@ -2239,7 +2272,7 @@ select.form-control {
     max-width: 640px;
     .rating {
         position: absolute;
-        top: 20px;
+        top: 5px;
         left: 20px;
         z-index: 20;
     }
@@ -2722,6 +2755,7 @@ select.form-control {
             display: block;
             img {
                 display: block;
+                width: 40px;
             }
             &:hover, &:active, &:focus {
                 opacity: 0.8;
