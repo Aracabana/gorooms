@@ -2514,6 +2514,9 @@ select.form-control {
 .room-card-btns > .btn {
   width: 50%;
 }
+.room-card-btns > .btn:only-child {
+  width: 100%;
+}
 .room-card-horizontal {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2531,6 +2534,7 @@ select.form-control {
   right: 59%;
 }
 .room-card-horizontal .room-card-in {
+  padding-left: 40px;
   width: 59%;
 }
 .room-card-horizontal .room-card-btns {
@@ -3922,6 +3926,7 @@ button.modal-close:focus {
   }
   .room-card-horizontal .room-card-in {
     width: 50%;
+    padding-left: 0;
   }
   /*=HOME=*/
   /*Search*/
