@@ -2540,6 +2540,9 @@ select.form-control {
 .room-card-horizontal .room-card-btns {
   border-left: 2px solid #ffffff;
 }
+.room-card-horizontal .room-card-btns > .btn:only-child {
+  width: 50%;
+}
 .btn-fire {
   padding-left: 30px;
   padding-right: 30px;
@@ -3956,6 +3959,10 @@ button.modal-close:focus {
   .advanced-search .search-bottom {
     max-width: 960px;
   }
+  /*Fire*/
+  .room-card-horizontal .room-card-btns > .btn:only-child {
+    width: 100%;
+  }
   /*About*/
   .about {
     padding: 100px 0;
@@ -4264,6 +4271,9 @@ button.modal-close:focus {
   }
   .room-card-horizontal .room-card-in {
     width: 100%;
+  }
+  .room-card-horizontal .room-card-btns {
+    border-left: none;
   }
   /*Blog*/
   .blog-card {
