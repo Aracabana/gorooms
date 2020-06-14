@@ -32,7 +32,6 @@ $(document).ready(function () {
     if (detectMobResult) {
         $('#book-popup .form-control-time').removeClass('js-time').attr('type', 'time');
     }
-   
     //scroll search
     if ($('*').is('#js-search')) {
         var search = $('#js-search');
@@ -54,7 +53,7 @@ $(document).ready(function () {
         $(window).scroll(function () {
             fixSearch(search);
             var st = $(this).scrollTop();
-            if (st > lastScrollTop){
+            if (st > lastScrollTop) {
                 search.removeClass('bottom');
             } else {
                 if (!searchBoxOnTop) {
@@ -89,21 +88,18 @@ $(document).ready(function () {
             searchBoxOnTop = true;
         }
     }
-    
     //advanced-search
     $('#js-advanced-search-open-btn').on('click', function (e) {
         e.stopPropagation();
         e.preventDefault();
         var isSearchOnTop = $('#js-search').hasClass('bottom') || $('#js-search').hasClass('show-advanced-btn') || $('#js-search').hasClass('prefixed');
-        if(isSearchOnTop) {
+        if (isSearchOnTop) {
             $('#js-advanced-search').addClass('fixed');
         } else {
             $('#js-advanced-search').removeClass('fixed');
         }
-
         $('#js-advanced-search').slideDown();
         $('#js-advanced-search-in').scrollTop(0);
-
         $('body').addClass('noscroll');
     });
     $('#js-advanced-search-close-btn').on('click', function (e) {
@@ -116,17 +112,15 @@ $(document).ready(function () {
         }, 800)
         $('body').removeClass('noscroll');
     });
-    
     //mobile menu
     $('#js-menu-btn').click(function (e) {
         e.preventDefault();
         $(this).toggleClass('open');
         $('#js-menu').slideToggle();
     });
-    
     //sliders
     if ($('*').is('.js-hotel-card-slider')) {
-        $('.js-hotel-card-slider').each(function(){
+        $('.js-hotel-card-slider').each(function () {
             var hotelCardSwiper = new Swiper(this, {
                 navigation: {
                     nextEl: this.querySelector('.swiper-button.swiper-button-next'),
@@ -170,47 +164,51 @@ $(document).ready(function () {
             },
         });
     }
-    
     //changing name of more-btn
     if ($('*').is('.content-more')) {
-        $('.content-more ').on('show.bs.collapse', function() {
+        $('.content-more ').on('show.bs.collapse', function () {
             $(this).next('.content-more-btn').children('span').text('Свернуть');
         });
-        $('.content-more ').on('hide.bs.collapse', function() {
+        $('.content-more ').on('hide.bs.collapse', function () {
             $(this).next('.content-more-btn').children('span').text('Развернуть');
         });
     }
-    
     //masked input
     $('input[type="tel"]').mask('+7 (999) 999 99 99');
     $('.js-time').mask('99:99');
-    
     //tables
-    if($('*').is('.text-section table')) {
+    if ($('*').is('.text-section table')) {
         var tables = $('.text-section').find('table');
-        tables.each(function() {
+        tables.each(function () {
             $(this).wrapAll('<div class="table-wrapper">');
         });
     }
-    
     //show tel number
-    $('.js-show-tel-btn').click(function() {
+    $('.js-show-tel-btn').click(function () {
         $(this).hide();
         $(this).next('.js-tel-link').addClass('visible');
     });
-    
     //formstyler
     if ($('*').is('select')) {
         $('select').styler();
     }
-    
     //rating
     $('.rating-title').click(function () {
         if (windowW <= 991) {
             $('.rating-dropdown').slideToggle();
         }
     });
-    
+    var url = document.location.toString();
+    if (url.match('#')) {
+        $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+    }
+    $('a').on('shown.bs.tab', function (e) {
+        window.location.hash = e.target.hash;
+        var top = $(e.target.hash).offset().top - 120;
+        $('.nav-tabs li').removeClass('active');
+        $('.nav-tabs a[href="' + e.target.hash + '"').closest('li').addClass('active');
+        $('html, body').animate({scrollTop: top}, 300);
+    });
     
     function detectMob() {
         const toMatch = [
@@ -222,10 +220,8 @@ $(document).ready(function () {
             /BlackBerry/i,
             /Windows Phone/i
         ];
-        
         return toMatch.some((toMatchItem) => {
             return navigator.userAgent.match(toMatchItem);
         });
     }
-
 });

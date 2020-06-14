@@ -955,12 +955,9 @@ select.form-control {
     color: @accent-color;
     background-color: transparent;
 }
-.form-control-time,
-.form-control-time .jq-selectbox__select {
+.form-control-time {
     width: 86px;
     height: 30px;
-}
-.form-control-time {
     &[type="time"] {
         padding-left: 8px;
         padding-right: 8px;
@@ -1054,30 +1051,19 @@ select.form-control {
                 });
             }
         }
+        .form-control-time {
+            border: 2px solid #ffffff;
+        }
         .form-control {
             color: #ffffff;
             background-color: transparent;
+            .placeholder({
+                color: #ffffff;
+            });
             &:focus {
                 color: @text-color;
                 background-color: #ffffff;
             }
-        }
-        .form-control .jq-selectbox__select {
-            background: transparent;
-        }
-        .form-control .jq-selectbox__select-text {
-            color: #ffffff;
-        }
-        .form-control.jq-selectbox.opened .jq-selectbox__select-text {
-            color: @text-color;
-        }
-        .form-control.jq-selectbox.opened .jq-selectbox__select {
-            border-color: @bg-color;
-            border-bottom-color: #ffffff;
-            background-color: #ffffff;
-        }
-        .jq-selectbox__dropdown {
-            border-color: @bg-color;
         }
     }
 }
@@ -1561,6 +1547,14 @@ select.form-control {
                 font-weight: 900;
                 font-size: 16px;
                 color: @accent-color;
+            }
+        }
+        a {
+            display: block;
+            font-size: 15px;
+            text-decoration: underline;
+            &:hover, &:active, &:focus {
+                text-decoration: none;
             }
         }
     }
@@ -2884,6 +2878,9 @@ button.modal-close {
         &:last-child {
             margin-bottom: 0;
         }
+    }
+    .form-control-date {
+        width: 155px;
     }
 }
 .modal-text-inprogress {

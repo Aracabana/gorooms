@@ -1356,8 +1356,7 @@ select.form-control {
   color: #ff9d45;
   background-color: transparent;
 }
-.form-control-time,
-.form-control-time .jq-selectbox__select {
+.form-control-time {
   width: 86px;
   height: 30px;
 }
@@ -1482,30 +1481,28 @@ select.form-control {
 .search-form .search-dates .form-control-date:focus:-ms-input-placeholder {
   color: #000000;
 }
+.search-form .search-dates .form-control-time {
+  border: 2px solid #ffffff;
+}
 .search-form .search-dates .form-control {
   color: #ffffff;
   background-color: transparent;
 }
+.search-form .search-dates .form-control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.search-form .search-dates .form-control::-moz-placeholder {
+  color: #ffffff;
+}
+.search-form .search-dates .form-control:-moz-placeholder {
+  color: #ffffff;
+}
+.search-form .search-dates .form-control:-ms-input-placeholder {
+  color: #ffffff;
+}
 .search-form .search-dates .form-control:focus {
   color: #000000;
   background-color: #ffffff;
-}
-.search-form .search-dates .form-control .jq-selectbox__select {
-  background: transparent;
-}
-.search-form .search-dates .form-control .jq-selectbox__select-text {
-  color: #ffffff;
-}
-.search-form .search-dates .form-control.jq-selectbox.opened .jq-selectbox__select-text {
-  color: #000000;
-}
-.search-form .search-dates .form-control.jq-selectbox.opened .jq-selectbox__select {
-  border-color: #f2f2f2;
-  border-bottom-color: #ffffff;
-  background-color: #ffffff;
-}
-.search-form .search-dates .jq-selectbox__dropdown {
-  border-color: #f2f2f2;
 }
 .search-form-group {
   display: -webkit-box;
@@ -2093,6 +2090,16 @@ select.form-control {
   font-weight: 900;
   font-size: 16px;
   color: #ff9d45;
+}
+.rating-dropdown a {
+  display: block;
+  font-size: 15px;
+  text-decoration: underline;
+}
+.rating-dropdown a:hover,
+.rating-dropdown a:active,
+.rating-dropdown a:focus {
+  text-decoration: none;
 }
 .rating-dark .rating-title {
   color: #000000;
@@ -3832,6 +3839,9 @@ button.modal-close:focus {
 }
 .book-form .form-group-date:last-child {
   margin-bottom: 0;
+}
+.book-form .form-control-date {
+  width: 155px;
 }
 .modal-text-inprogress {
   padding: 40px 0;

@@ -109,26 +109,16 @@
                         <input id="advanced-search-from-date" name="advanced-search-from-date" type="text"
                                class="form-control form-control-date datepicker-here"
                                placeholder="10.06.2020" required>
-                        <select name="advanced-search-from-time" id="advanced-search-from-time" class="form-control form-control-time" required>
-                            <option value="14:00">14:00</option>
-                            <option value="15:00">15:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                        </select>
+                        <input id="advanced-search-from-time" name="advanced-search-from-time" type="text" class="form-control form-control-time js-time"
+                               placeholder="14:00" required>
                     </div>
                     <div class="form-group-date">
                         <p class="form-group-date-label">Выезд:</p>
                         <input id="advanced-search-to-date" name="advanced-search-to-date" type="text"
                                class="form-control form-control-date datepicker-here"
                                placeholder="10.06.2020" required>
-                        <select name="advanced-search-to-time" id="advanced-search-to-time" class="form-control form-control-time" required>
-                            <option value="14:00">14:00</option>
-                            <option value="15:00">15:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                        </select>
+                        <input id="advanced-search-to-time" name="advanced-search-to-time" type="text" class="form-control form-control-time js-time"
+                               placeholder="14:00" required>
                     </div>
                 </div>
                 <div class="row align-items-end">
@@ -542,25 +532,15 @@
                                 <input id="search-from-date" name="search-from-date" type="text"
                                        class="form-control form-control-date datepicker-here"
                                        placeholder="10.06.2020" data-auto-close="true" readonly required>
-                                <select name="search-from-time" id="search-from-time" class="form-control form-control-time" required>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select>
+                                <input id="search-from-time" name="search-from-time" type="text" class="form-control form-control-time js-time"
+                                       placeholder="14:00" required>
                             </div>
                             <div class="form-group-date">
                                 <p class="form-group-date-label">Выезд:</p>
                                 <input id="search-to-date" name="search-to-date" type="text" class="form-control form-control-date datepicker-here"
                                        placeholder="10.06.2020" data-auto-close="true" readonly required>
-                                <select name="search-to-time" id="search-to-time" class="form-control form-control-time" required>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="18:00">18:00</option>
-                                </select>
+                                <input id="search-to-time" name="search-to-time" type="text" class="form-control form-control-time js-time"
+                                       placeholder="14:00" required>
                             </div>
                         </div>
                         <button id="js-advanced-search-open-btn" class="advanced-search-btn advanced-search-btn-open">Расширеный поиск</button>
@@ -626,78 +606,8 @@
                                         <li class="rating-dropdown-item">
                                             <span>9.7</span>Цена
                                         </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hotel-card-slider swiper-container js-hotel-card-slider">
-                            <div class="swiper-wrapper">
-                                <a href="hotel-page.html" class="swiper-slide">
-                                    <img src="img/img-hotel-sm.jpg" alt="">
-                                </a>
-                                <a href="hotel-page.html" class="swiper-slide">
-                                    <img src="img/img-hotel-sm-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-button swiper-button-next"></div>
-                            <div class="swiper-button swiper-button-prev"></div>
-                        </div>
-                        <a href="hotel-page.html" class="btn btn-orange btn-block">Выбрать номер</a>
-                        <p class="show-tel-wrapper">
-                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
-                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
-                        </p>
-                        <a href="hotel-page.html" class="hotel-card-content">
-                            <p class="hotel-card-title">Гранд отель</p>
-                            <p class="hotel-card-address">Город, Округ, Район</p>
-                            <ul class="hotel-card-metro">
-                                <li class="metro"><img src="img/ico-metro-green.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-red.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-yellow.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-blue.svg" alt="">Измайловская - 950 м</li>
-                            </ul>
-                            <ul class="hotel-card-prices">
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">1 час - от 250 руб.</p>
-                                    <p class="hotel-card-prices-item-info">от 2-х часов</p>
-                                </li>
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">Ночь - от 500 руб.</p>
-                                    <p class="hotel-card-prices-item-info">с 11:45 до 10:00</p>
-                                </li>
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">Сутки - от 1000 руб.</p>
-                                    <p class="hotel-card-prices-item-info">с 14:00 до 12:00</p>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-p-sm col-sm-6 col-lg-3 col-xxl-2 card-wrapper">
-                    <div class="hotel-card">
-                        <div class="rating">
-                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
-                            <div class="rating-dropdown">
-                                <div class="rating-dropdown-in">
-                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
-                                    <ul class="rating-dropdown-content">
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Чистота
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Общий комфорт
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Персонал
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Удобства
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Расположение
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Цена
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -772,78 +682,8 @@
                                         <li class="rating-dropdown-item">
                                             <span>9.7</span>Цена
                                         </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hotel-card-slider swiper-container js-hotel-card-slider">
-                            <div class="swiper-wrapper">
-                                <a href="hotel-page.html" class="swiper-slide">
-                                    <img src="img/img-hotel-sm.jpg" alt="">
-                                </a>
-                                <a href="hotel-page.html" class="swiper-slide">
-                                    <img src="img/img-hotel-sm-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-button swiper-button-next"></div>
-                            <div class="swiper-button swiper-button-prev"></div>
-                        </div>
-                        <a href="hotel-page.html" class="btn btn-orange btn-block">Выбрать номер</a>
-                        <p class="show-tel-wrapper">
-                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
-                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
-                        </p>
-                        <a href="hotel-page.html" class="hotel-card-content">
-                            <p class="hotel-card-title">Гранд отель</p>
-                            <p class="hotel-card-address">Город, Округ, Район</p>
-                            <ul class="hotel-card-metro">
-                                <li class="metro"><img src="img/ico-metro-green.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-red.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-yellow.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-blue.svg" alt="">Измайловская - 950 м</li>
-                            </ul>
-                            <ul class="hotel-card-prices">
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">1 час - от 250 руб.</p>
-                                    <p class="hotel-card-prices-item-info">от 2-х часов</p>
-                                </li>
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">Ночь - от 500 руб.</p>
-                                    <p class="hotel-card-prices-item-info">с 11:45 до 10:00</p>
-                                </li>
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">Сутки - от 1000 руб.</p>
-                                    <p class="hotel-card-prices-item-info">с 14:00 до 12:00</p>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-p-sm col-sm-6 col-lg-3 col-xxl-2 card-wrapper">
-                    <div class="hotel-card">
-                        <div class="rating">
-                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
-                            <div class="rating-dropdown">
-                                <div class="rating-dropdown-in">
-                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
-                                    <ul class="rating-dropdown-content">
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Чистота
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Общий комфорт
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Персонал
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Удобства
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Расположение
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Цена
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -918,78 +758,8 @@
                                         <li class="rating-dropdown-item">
                                             <span>9.7</span>Цена
                                         </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hotel-card-slider swiper-container js-hotel-card-slider">
-                            <div class="swiper-wrapper">
-                                <a href="hotel-page.html" class="swiper-slide">
-                                    <img src="img/img-hotel-sm.jpg" alt="">
-                                </a>
-                                <a href="hotel-page.html" class="swiper-slide">
-                                    <img src="img/img-hotel-sm-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-button swiper-button-next"></div>
-                            <div class="swiper-button swiper-button-prev"></div>
-                        </div>
-                        <a href="hotel-page.html" class="btn btn-orange btn-block">Выбрать номер</a>
-                        <p class="show-tel-wrapper">
-                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
-                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
-                        </p>
-                        <a href="hotel-page.html" class="hotel-card-content">
-                            <p class="hotel-card-title">Гранд отель</p>
-                            <p class="hotel-card-address">Город, Округ, Район</p>
-                            <ul class="hotel-card-metro">
-                                <li class="metro"><img src="img/ico-metro-green.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-red.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-yellow.svg" alt="">Измайловская - 950 м</li>
-                                <li class="metro"><img src="img/ico-metro-blue.svg" alt="">Измайловская - 950 м</li>
-                            </ul>
-                            <ul class="hotel-card-prices">
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">1 час - от 250 руб.</p>
-                                    <p class="hotel-card-prices-item-info">от 2-х часов</p>
-                                </li>
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">Ночь - от 500 руб.</p>
-                                    <p class="hotel-card-prices-item-info">с 11:45 до 10:00</p>
-                                </li>
-                                <li class="hotel-card-prices-item">
-                                    <p class="hotel-card-prices-item-title">Сутки - от 1000 руб.</p>
-                                    <p class="hotel-card-prices-item-info">с 14:00 до 12:00</p>
-                                </li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-p-sm col-sm-6 col-lg-3 col-xxl-2 card-wrapper">
-                    <div class="hotel-card">
-                        <div class="rating">
-                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
-                            <div class="rating-dropdown">
-                                <div class="rating-dropdown-in">
-                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
-                                    <ul class="rating-dropdown-content">
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Чистота
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Общий комфорт
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Персонал
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Удобства
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Расположение
-                                        </li>
-                                        <li class="rating-dropdown-item">
-                                            <span>9.7</span>Цена
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1064,6 +834,9 @@
                                         <li class="rating-dropdown-item">
                                             <span>9.7</span>Цена
                                         </li>
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -1136,6 +909,237 @@
                                         </li>
                                         <li class="rating-dropdown-item">
                                             <span>9.7</span>Цена
+                                        </li>
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-card-slider swiper-container js-hotel-card-slider">
+                            <div class="swiper-wrapper">
+                                <a href="hotel-page.html" class="swiper-slide">
+                                    <img src="img/img-hotel-sm.jpg" alt="">
+                                </a>
+                                <a href="hotel-page.html" class="swiper-slide">
+                                    <img src="img/img-hotel-sm-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        </div>
+                        <a href="hotel-page.html" class="btn btn-orange btn-block">Выбрать номер</a>
+                        <p class="show-tel-wrapper">
+                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                        </p>
+                        <a href="hotel-page.html" class="hotel-card-content">
+                            <p class="hotel-card-title">Гранд отель</p>
+                            <p class="hotel-card-address">Город, Округ, Район</p>
+                            <ul class="hotel-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.svg" alt="">Измайловская - 950 м</li>
+                            </ul>
+                            <ul class="hotel-card-prices">
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">1 час - от 250 руб.</p>
+                                    <p class="hotel-card-prices-item-info">от 2-х часов</p>
+                                </li>
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">Ночь - от 500 руб.</p>
+                                    <p class="hotel-card-prices-item-info">с 11:45 до 10:00</p>
+                                </li>
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">Сутки - от 1000 руб.</p>
+                                    <p class="hotel-card-prices-item-info">с 14:00 до 12:00</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-p-sm col-sm-6 col-lg-3 col-xxl-2 card-wrapper">
+                    <div class="hotel-card">
+                        <div class="rating">
+                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                            <div class="rating-dropdown">
+                                <div class="rating-dropdown-in">
+                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                    <ul class="rating-dropdown-content">
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Чистота
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Общий комфорт
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Персонал
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Удобства
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Расположение
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Цена
+                                        </li>
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-card-slider swiper-container js-hotel-card-slider">
+                            <div class="swiper-wrapper">
+                                <a href="hotel-page.html" class="swiper-slide">
+                                    <img src="img/img-hotel-sm.jpg" alt="">
+                                </a>
+                                <a href="hotel-page.html" class="swiper-slide">
+                                    <img src="img/img-hotel-sm-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        </div>
+                        <a href="hotel-page.html" class="btn btn-orange btn-block">Выбрать номер</a>
+                        <p class="show-tel-wrapper">
+                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                        </p>
+                        <a href="hotel-page.html" class="hotel-card-content">
+                            <p class="hotel-card-title">Гранд отель</p>
+                            <p class="hotel-card-address">Город, Округ, Район</p>
+                            <ul class="hotel-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.svg" alt="">Измайловская - 950 м</li>
+                            </ul>
+                            <ul class="hotel-card-prices">
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">1 час - от 250 руб.</p>
+                                    <p class="hotel-card-prices-item-info">от 2-х часов</p>
+                                </li>
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">Ночь - от 500 руб.</p>
+                                    <p class="hotel-card-prices-item-info">с 11:45 до 10:00</p>
+                                </li>
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">Сутки - от 1000 руб.</p>
+                                    <p class="hotel-card-prices-item-info">с 14:00 до 12:00</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-p-sm col-sm-6 col-lg-3 col-xxl-2 card-wrapper">
+                    <div class="hotel-card">
+                        <div class="rating">
+                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                            <div class="rating-dropdown">
+                                <div class="rating-dropdown-in">
+                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                    <ul class="rating-dropdown-content">
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Чистота
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Общий комфорт
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Персонал
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Удобства
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Расположение
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Цена
+                                        </li>
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hotel-card-slider swiper-container js-hotel-card-slider">
+                            <div class="swiper-wrapper">
+                                <a href="hotel-page.html" class="swiper-slide">
+                                    <img src="img/img-hotel-sm.jpg" alt="">
+                                </a>
+                                <a href="hotel-page.html" class="swiper-slide">
+                                    <img src="img/img-hotel-sm-2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-button swiper-button-next"></div>
+                            <div class="swiper-button swiper-button-prev"></div>
+                        </div>
+                        <a href="hotel-page.html" class="btn btn-orange btn-block">Выбрать номер</a>
+                        <p class="show-tel-wrapper">
+                            <button class="btn btn-blue btn-block js-show-tel-btn" type="button">Показать телефон</button>
+                            <a href="tel:+7990111111111" class="btn btn-blue btn-block tel-link js-tel-link">+7-990-111-111-111</a>
+                        </p>
+                        <a href="hotel-page.html" class="hotel-card-content">
+                            <p class="hotel-card-title">Гранд отель</p>
+                            <p class="hotel-card-address">Город, Округ, Район</p>
+                            <ul class="hotel-card-metro">
+                                <li class="metro"><img src="img/ico-metro-green.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-red.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-yellow.svg" alt="">Измайловская - 950 м</li>
+                                <li class="metro"><img src="img/ico-metro-blue.svg" alt="">Измайловская - 950 м</li>
+                            </ul>
+                            <ul class="hotel-card-prices">
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">1 час - от 250 руб.</p>
+                                    <p class="hotel-card-prices-item-info">от 2-х часов</p>
+                                </li>
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">Ночь - от 500 руб.</p>
+                                    <p class="hotel-card-prices-item-info">с 11:45 до 10:00</p>
+                                </li>
+                                <li class="hotel-card-prices-item">
+                                    <p class="hotel-card-prices-item-title">Сутки - от 1000 руб.</p>
+                                    <p class="hotel-card-prices-item-info">с 14:00 до 12:00</p>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-p-sm col-sm-6 col-lg-3 col-xxl-2 card-wrapper">
+                    <div class="hotel-card">
+                        <div class="rating">
+                            <p class="rating-title">Рейтинг <span>4.7</span> (124)</p>
+                            <div class="rating-dropdown">
+                                <div class="rating-dropdown-in">
+                                    <p class="rating-dropdown-header">9.7 Превосходно <span>(124)</span></p>
+                                    <ul class="rating-dropdown-content">
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Чистота
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Общий комфорт
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Персонал
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Удобства
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Расположение
+                                        </li>
+                                        <li class="rating-dropdown-item">
+                                            <span>9.7</span>Цена
+                                        </li>
+                                        <li>
+                                            <a href="hotel-page.html#reviews">Читать отзывы</a>
                                         </li>
                                     </ul>
                                 </div>
