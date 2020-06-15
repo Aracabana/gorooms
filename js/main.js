@@ -4,8 +4,12 @@ $(document).ready(function () {
     var lastScrollTop = 0;
     var detectMobResult = detectMob();
     var header = $('.header');
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
     $(window).resize(function () {
         windowW = $(window).width();
+        vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
         if (windowW >= 992) {
             $('#js-menu-btn').removeClass('open');
             $('#js-menu').removeAttr('style');
@@ -105,10 +109,9 @@ $(document).ready(function () {
     $('#js-advanced-search-close-btn').on('click', function (e) {
         e.stopPropagation();
         e.preventDefault();
-        var advancedSearch = $(this).closest('#js-advanced-search');
-        $(advancedSearch).slideUp();
+        $('#js-advanced-search').slideUp();
         setTimeout(function () {
-            $(advancedSearch).removeClass('fixed');
+            $('#js-advanced-search').removeClass('fixed');
         }, 800)
         $('body').removeClass('noscroll');
     });

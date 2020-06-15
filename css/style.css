@@ -1701,7 +1701,7 @@ select.form-control {
   padding-top: 20px;
   height: 100%;
   max-height: -webkit-calc(-102vh);
-  max-height: calc(100vh - 70px - 132px);
+  max-height: calc(var(--vh, 1vh) * 100 - 70px - 132px);
 }
 .advanced-search-in::-webkit-scrollbar {
   width: 4px;
@@ -4239,12 +4239,12 @@ button.modal-close:focus {
   }
   .advanced-search.fixed .advanced-search-in {
     max-height: -webkit-calc(-14vh);
-    max-height: calc(100vh - 114px);
+    max-height: calc(var(--vh, 1vh) * 100 - 114px);
   }
   .advanced-search-in {
     margin-bottom: 114px;
     max-height: -webkit-calc(-80vh);
-    max-height: calc(100vh - 114px - 66px);
+    max-height: calc(var(--vh, 1vh) * 100 - 114px - 66px);
   }
   .advanced-search-details-col:first-child {
     margin-bottom: 15px;
@@ -4563,12 +4563,12 @@ button.modal-close:focus {
   }
   .advanced-search.fixed .advanced-search-in {
     max-height: -webkit-calc(-22vh);
-    max-height: calc(100vh - 122px);
+    max-height: calc(var(--vh, 1vh) * 100 - 122px);
   }
   .advanced-search-in {
     margin-bottom: 122px;
     max-height: -webkit-calc(-83vh);
-    max-height: calc(100vh - 122px - 61px);
+    max-height: calc(var(--vh, 1vh) * 100 - 122px - 61px);
   }
   .advanced-search-prices {
     padding-bottom: 0;
@@ -4770,12 +4770,12 @@ button.modal-close:focus {
   /*Search*/
   .advanced-search.fixed .advanced-search-in {
     max-height: -webkit-calc(-53vh);
-    max-height: calc(100vh - 153px);
+    max-height: calc(var(--vh, 1vh) * 100 - 153px);
   }
   .advanced-search-in {
     margin-bottom: 153px;
     max-height: -webkit-calc(-114vh);
-    max-height: calc(100vh - 153px - 61px);
+    max-height: calc(var(--vh, 1vh) * 100 - 153px - 61px);
   }
   .advanced-search-reset-btn {
     margin-right: 0;

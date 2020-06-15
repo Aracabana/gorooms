@@ -1191,7 +1191,7 @@ select.form-control {
         padding-top: 20px;
         height: 100%;
         max-height: -webkit-calc(100vh - 70px - 132px);
-        max-height: calc(100vh - 70px - 132px);
+        max-height: calc(var(--vh, 1vh) * 100 - 70px - 132px);
         &::-webkit-scrollbar {
             width: 4px;
             background-color: fade(@text-color, 20%);
