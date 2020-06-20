@@ -34,7 +34,7 @@ $(document).ready(function () {
     });
     $(window).trigger('resize');
     if (detectMobResult) {
-        $('#book-popup .form-control-time').removeClass('js-time').attr('type', 'time');
+        $('.form-control-time').removeClass('js-time').attr('type', 'time');
     }
     //scroll search
     if ($('*').is('#js-search')) {
@@ -68,11 +68,6 @@ $(document).ready(function () {
         });
     }
     function fixSearch(search) {
-        var datepicker = $('.datepicker-here').datepicker().data('datepicker');
-        datepicker.update({
-            position: "bottom left"
-        });
-        datepicker.hide();
         if ($(window).scrollTop() >= searchTop + searchHeight) {
             searchWrapper.css('padding-top', searchHeight);
             search.removeClass('prefixed');

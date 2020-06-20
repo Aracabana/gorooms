@@ -1169,7 +1169,7 @@ select.form-control {
   padding-top: 2px;
   padding-left: 8px;
   padding-right: 35px;
-  width: 135px;
+  width: 155px;
   height: 30px;
   background-image: url("../img/ico-calendar.svg");
   background-repeat: no-repeat;
@@ -1191,69 +1191,6 @@ select.form-control {
   background-repeat: no-repeat;
   background-position: right 0 center;
   background-size: 20px 20px;
-}
-.datepicker {
-  z-index: 1051;
-  border: 1px solid #f2f2f2;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: #000000;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.datepicker--pointer {
-  border-top: 1px solid #f2f2f2;
-  border-right: 1px solid #f2f2f2;
-}
-.datepicker--nav {
-  border-bottom: 1px solid #f2f2f2;
-}
-.datepicker--nav-action {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.datepicker--nav-action path {
-  stroke: #000000;
-}
-.datepicker--nav-title i {
-  color: #3c3c3b;
-}
-.datepicker--nav-action:hover,
-.datepicker--nav-title:hover {
-  color: #ffffff;
-  background: #ff9d45;
-}
-.datepicker--nav-action:hover path,
-.datepicker--nav-title:hover path {
-  stroke: #000000;
-}
-.datepicker--day-name {
-  color: #ff9d45;
-}
-.datepicker--cell {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.datepicker--cell.-focus- {
-  color: #ffffff;
-  background: #2f64ad;
-}
-.datepicker--cell.-current- {
-  color: #2f64ad;
-}
-.datepicker--cell.-selected-,
-.datepicker--cell.-selected-.-current- {
-  color: #fff;
-  background: #2f64ad;
-}
-.datepicker--cell.-selected-.-focus- {
-  background: #2f64ad;
 }
 /*formstyler*/
 .form-control.jq-selectbox {
@@ -3840,9 +3777,6 @@ button.modal-close:focus {
 .book-form .form-group-date:last-child {
   margin-bottom: 0;
 }
-.book-form .form-control-date {
-  width: 155px;
-}
 .modal-text-inprogress {
   padding: 40px 0;
   text-align: center;
@@ -3948,6 +3882,12 @@ button.modal-close:focus {
   }
 }
 @media (max-width: 1219px) {
+  .form-group-date-label {
+    margin-right: 5px;
+  }
+  .search-dates .form-group-date {
+    margin-left: 16px;
+  }
   /*=HOME=*/
   /*Search*/
   .advanced-search-location {

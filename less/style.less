@@ -792,7 +792,7 @@ select.form-control {
     padding-top: 2px;
     padding-left: 8px;
     padding-right: 35px;
-    width: 135px;
+    width: 155px;
     height: 30px;
     background-image: url("../img/ico-calendar.svg");
     background-repeat: no-repeat;
@@ -814,60 +814,6 @@ select.form-control {
             background-size: 20px 20px;
         }
     }
-}
-.datepicker {
-    z-index: 1051;
-    border: 1px solid @bg-color;
-    .border-radius(0);
-    font-family: @font;
-    font-size: 16px;
-    color: @text-color;
-    .box-shadow-none();
-}
-.datepicker--pointer {
-    border-top: 1px solid  @bg-color;
-    border-right: 1px solid  @bg-color;
-}
-.datepicker--nav {
-    border-bottom: 1px solid  @bg-color;
-}
-.datepicker--nav-action {
-    .border-radius(0);
-    path {
-        stroke: @text-color;
-    }
-}
-.datepicker--nav-title {
-    i {
-        color: @text-color-medium;
-    }
-}
-.datepicker--nav-action:hover, .datepicker--nav-title:hover {
-    color: #ffffff;
-    background: @accent-color;
-    path {
-        stroke: @text-color;
-    }
-}
-.datepicker--day-name {
-    color: @accent-color;
-}
-.datepicker--cell {
-    .border-radius(0);
-    &.-focus- {
-        color: #ffffff;
-        background: @accent-color-2;
-    }
-}
-.datepicker--cell.-current- {
-    color: @accent-color-2;
-}
-.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
-    color: #fff;
-    background: @accent-color-2;
-}
-.datepicker--cell.-selected-.-focus- {
-    background: @accent-color-2;
 }
 /*formstyler*/
 .form-control.jq-selectbox {
@@ -2878,9 +2824,6 @@ button.modal-close {
         &:last-child {
             margin-bottom: 0;
         }
-    }
-    .form-control-date {
-        width: 155px;
     }
 }
 .modal-text-inprogress {
