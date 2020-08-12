@@ -135,27 +135,17 @@ $(document).ready(function () {
     }
     if ($('*').is('.product-slider-big')) {
         var galleryThumbs = new Swiper('.product-slider-small', {
-            spaceBetween: 10,
-            slidesPerView: 2,
-            loop: true,
+            spaceBetween: 25,
+            slidesPerView: 4,
+            loop: $('.product-slide-small').length > 4,
             roundLengths: true,
             navigation: {
                 nextEl: '.swiper-button.swiper-button-next.product-slider-small-button-next',
                 prevEl: '.swiper-button.swiper-button-prev.product-slider-small-button-prev'
             },
-            breakpoints: {
-                361: {
-                    spaceBetween: 10,
-                    slidesPerView: 3
-                },
-                481: {
-                    spaceBetween: 25,
-                    slidesPerView: 4
-                }
-            }
         });
         var galleryTop = new Swiper('.product-slider-big', {
-            loop: true,
+            loop: $('.product-slide-small').length > 4,
             roundLengths: true,
             thumbs: {
                 swiper: galleryThumbs,

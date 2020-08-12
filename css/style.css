@@ -436,6 +436,14 @@ h4 {
 .text-section ol:last-child {
   margin-bottom: 0;
 }
+.text-section h1,
+.text-section h2,
+.text-section h3,
+.text-section h4,
+.text-section h5,
+.text-section h6 {
+  color: #2f64ad;
+}
 .text-section * + h2 {
   margin-top: 40px;
 }
@@ -2367,12 +2375,18 @@ select.form-control {
   margin-bottom: 10px;
   font-size: 14px;
 }
+.room-card-address-link {
+  display: block;
+}
 .room-card-metro {
   column-count: 2;
   column-gap: 30px;
 }
 .room-card-metro .metro {
-  margin-bottom: 8px;
+  padding-bottom: 8px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 .room-card-prices {
   display: -webkit-box;
@@ -2408,6 +2422,7 @@ select.form-control {
   box-sizing: border-box;
   padding: 10px 15px;
   width: 33%;
+  min-height: 110px;
   background-color: #f2f2f2;
 }
 .room-card-prices-item + .room-card-prices-item {
@@ -2926,6 +2941,13 @@ select.form-control {
   max-width: 100%;
 }
 .review-in {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3127,7 +3149,7 @@ select.form-control {
 .room-address {
   position: relative;
   margin-bottom: 10px;
-  padding-left: 45px;
+  padding: 3px 0 3px 45px;
   max-width: 365px;
   font-size: 18px;
   background-image: url("../img/ico-address-pin.svg");
@@ -3782,6 +3804,11 @@ button.modal-close:focus {
   text-align: center;
   font-weight: 700;
   font-size: 18px;
+}
+.modal-text-inprogress img {
+  margin-right: 10px;
+  vertical-align: middle;
+  max-width: 20px;
 }
 /*==========RESPONSIVE==========*/
 @media (min-width: 1455px) {

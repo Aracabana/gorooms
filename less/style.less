@@ -182,6 +182,9 @@ h4 {
             margin-bottom: 0;
         }
     }
+    h1, h2, h3, h4, h5, h6 {
+        color: @accent-color-2;
+    }
     * + h2 {
         margin-top: 40px;
     }
@@ -1770,12 +1773,18 @@ select.form-control {
     &-address {
         margin-bottom: 10px;
         font-size: 14px;
+        &-link {
+            display: block;
+        }
     }
     &-metro {
         column-count: 2;
         column-gap: 30px;
         .metro {
-            margin-bottom: 8px;
+            padding-bottom: 8px;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
         }
     }
     &-prices {
@@ -1790,6 +1799,7 @@ select.form-control {
             .box-sizing();
             padding: 10px 15px;
             width: 33%;
+            min-height: 110px;
             background-color: @bg-color;
             + .room-card-prices-item {
                 border-left: 1px solid #ffffff;
@@ -2164,6 +2174,8 @@ select.form-control {
         }
     }
     &-in {
+        .flex-grow(1);
+        .flex-shrink(1);
         .flex();
         .space-between();
         border: 1px solid @bg-color;
@@ -2320,7 +2332,7 @@ select.form-control {
 .room-address {
     position: relative;
     margin-bottom: 10px;
-    padding-left: 45px;
+    padding: 3px 0 3px 45px;
     max-width: 365px;
     font-size: 18px;
     background-image: url("../img/ico-address-pin.svg");
@@ -2831,6 +2843,11 @@ button.modal-close {
     text-align: center;
     font-weight: 700;
     font-size: 18px;
+    img {
+        margin-right: 10px;
+        vertical-align: middle;
+        max-width: 20px;
+    }
 }
 
 @import "responsive.less";
